@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Geomanist';
+  font-weight: 300;
+  font-display: swap;
+  src: url(./geomanist-regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist';
+  font-weight: 400;
+  font-display: swap;
+  src: url(./geomanist-book.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  font-weight: 500;
+  font-display: swap;
+  src: url(./geomanist-medium.ttf) format('truetype');
+}

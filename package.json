@@ -1,0 +1,15 @@
+{
+  "name": "cloudhub-pdf",
+  "version": "1.0.0",
+  "description": "Components for generating pdf reports ",
+  "main": "ReportViewer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^1.6.3"
+  },
+  "keywords": [],
+  "author": "Bernard Gaitho <gaithoben@gmail.com> (http://github.com/gaithoben)",
+  "license": "MIT"
+}
