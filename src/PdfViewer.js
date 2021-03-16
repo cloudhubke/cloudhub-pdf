@@ -25,7 +25,7 @@ Font.register({
   ],
 });
 
-const ReportViewer = ({ children }) => {
+const PdfViewer = ({ children }) => {
   const store = {};
   return (
     <PDFViewer
@@ -40,4 +40,4 @@ const ReportViewer = ({ children }) => {
   );
 };
 
-export default ReportViewer;
+export default PdfViewer;

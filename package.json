@@ -2,12 +2,30 @@
   "name": "cloudhub-pdf",
   "version": "1.0.0",
   "description": "Components for generating pdf reports ",
-  "main": "ReportViewer.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rimraf dist",
+    "build": "NODE_ENV=development npx babel src --config-file ./babel.config.json --out-dir dist"
   },
   "dependencies": {
     "@react-pdf/renderer": "^1.6.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.0",
+    "@babel/core": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "7.2.0",
+    "@babel/preset-env": "7.2.0",
+    "@babel/preset-flow": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-plugin-transform-imports": "^2.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "2.2.1"
   },
   "keywords": [],
   "author": "Bernard Gaitho <gaithoben@gmail.com> (http://github.com/gaithoben)",
