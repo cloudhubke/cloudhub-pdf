@@ -11,15 +11,15 @@ if (isNode) {
   const path = require('path');
   geomanistnormalfont = path.join(
     __dirname,
-    './assets/fonts/geomanist/geomanist-regular.ttf'
+    './fonts/geomanist/geomanist-regular.ttf'
   );
   geomanistmediumfont = path.join(
     __dirname,
-    './assets/fonts/geomanist/geomanist-medium.ttf'
+    './fonts/geomanist/geomanist-medium.ttf'
   );
   geomanistbookfont = path.join(
     __dirname,
-    './assets/fonts/geomanist/geomanist-book.ttf'
+    './fonts/geomanist/geomanist-book.ttf'
   );
 } else {
   geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf');
