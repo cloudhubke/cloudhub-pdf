@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from '@react-pdf/renderer';
 import Block from './Block';
 import Text from './Text';
-import { colors } from '../../theme';
+import { colors } from '../theme';
 
 import GridCell from './GridCell';
 
@@ -11,7 +11,7 @@ const DataRow = ({ row, datarow, cellComponent, style, ...props }) => {
     height: 28,
     borderBottomWidth: 0.5,
     borderBottomColor: colors.gray,
-    ...style,
+    ...style
   });
 
   const renderRow = () =>
@@ -39,7 +39,7 @@ const DataRow = ({ row, datarow, cellComponent, style, ...props }) => {
 };
 
 DataRow.defaultProps = {
-  row: [],
+  row: []
 };
 
 export default DataRow;

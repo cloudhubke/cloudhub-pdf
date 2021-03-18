@@ -7,7 +7,7 @@ exports.default = exports.styles = void 0;
 
 var _renderer = require("@react-pdf/renderer");
 
-var _theme = require("../../theme");
+var _theme = require("../theme");
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -345,19 +345,19 @@ var styles = {
     backgroundColor: _theme.colors.twitterColor
   },
   success: {
-    backgroundColor: _theme.colors.successColor[0]
+    backgroundColor: _theme.colors.success
   },
   info: {
-    backgroundColor: _theme.colors.infoColor[0]
+    backgroundColor: _theme.colors.info
   },
   rose: {
-    backgroundColor: _theme.colors.roseColor[0]
+    backgroundColor: _theme.colors.rose
   },
   warning: {
-    backgroundColor: _theme.colors.warningColor[0]
+    backgroundColor: _theme.colors.warning
   },
   danger: {
-    backgroundColor: _theme.colors.dangerColor[0]
+    backgroundColor: _theme.colors.danger
   }
 };
 exports.styles = styles;

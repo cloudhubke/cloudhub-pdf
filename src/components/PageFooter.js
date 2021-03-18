@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from '@react-pdf/renderer';
 import Block from './Block';
-import { colors, sizes } from '../../theme';
+import { colors, sizes } from '../theme';
 
 const PageFooter = ({ style, children, ...props }) => {
   const footerStyles = StyleSheet.create({
@@ -12,7 +12,7 @@ const PageFooter = ({ style, children, ...props }) => {
     borderTopWidth: 0.5,
     borderTopColor: colors.gray,
     backgroundColor: colors.gray4,
-    ...style,
+    ...style
   });
 
   return (
@@ -23,7 +23,7 @@ const PageFooter = ({ style, children, ...props }) => {
         sizes.margin / 2,
         sizes.margin * 1.5,
         sizes.margin / 2,
-        sizes.margin * 2,
+        sizes.margin * 2
       ]}
       padding={[sizes.padding / 2, 5]}
       fixed

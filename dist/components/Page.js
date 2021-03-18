@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _renderer = require("@react-pdf/renderer");
 
-var _theme = require("../../theme");
+var _theme = require("../theme");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -174,19 +174,19 @@ var styles = {
     backgroundColor: _theme.colors.twitterColor
   },
   success: {
-    backgroundColor: _theme.colors.successColor[0]
+    backgroundColor: _theme.colors.success
   },
   info: {
-    backgroundColor: _theme.colors.infoColor[0]
+    backgroundColor: _theme.colors.info
   },
   rose: {
-    backgroundColor: _theme.colors.roseColor[0]
+    backgroundColor: _theme.colors.rose
   },
   warning: {
-    backgroundColor: _theme.colors.warningColor[0]
+    backgroundColor: _theme.colors.warning
   },
   danger: {
-    backgroundColor: _theme.colors.dangerColor[0]
+    backgroundColor: _theme.colors.danger
   }
 };
 var _default = Page;

@@ -117,10 +117,28 @@ Object.defineProperty(exports, "WaterMark", {
     return _WaterMark.default;
   }
 });
+Object.defineProperty(exports, "PageFooter", {
+  enumerable: true,
+  get: function get() {
+    return _PageFooter.default;
+  }
+});
+Object.defineProperty(exports, "PageHeader", {
+  enumerable: true,
+  get: function get() {
+    return _PageHeader.default;
+  }
+});
+Object.defineProperty(exports, "RenderHtml", {
+  enumerable: true,
+  get: function get() {
+    return _RenderHtml.default;
+  }
+});
 
 var _renderer = require("@react-pdf/renderer");
 
-var _theme = require("../../theme");
+var _theme = require("../theme");
 
 var _Document = _interopRequireDefault(require("./Document"));
 
@@ -147,5 +165,11 @@ var _DataRow = _interopRequireDefault(require("./DataRow"));
 var _ReportGrid = _interopRequireDefault(require("./ReportGrid"));
 
 var _WaterMark = _interopRequireDefault(require("./WaterMark"));
+
+var _PageFooter = _interopRequireDefault(require("./PageFooter"));
+
+var _PageHeader = _interopRequireDefault(require("./PageHeader"));
+
+var _RenderHtml = _interopRequireDefault(require("./RenderHtml"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

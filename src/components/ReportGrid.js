@@ -1,5 +1,5 @@
 import React from 'react';
-import { sizes } from '../../theme';
+import { sizes } from '../theme';
 import HeaderRow from './HeaderRow';
 import Block from './Block';
 import Grid from './Grid';
@@ -55,6 +55,6 @@ const ReportGrid = ({
 ReportGrid.defaultProps = {
   columns: [],
   summary: {},
-  data: [],
+  data: []
 };
 export default ReportGrid;

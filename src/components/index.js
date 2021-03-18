@@ -2,10 +2,10 @@ export {
   StyleSheet,
   View as PdfView,
   Page as PdfPage,
-  Text as PdfText,
+  Text as PdfText
 } from '@react-pdf/renderer';
 
-export { colors, sizes } from '../../theme';
+export { colors, sizes } from '../theme';
 
 export { default as Document } from './Document';
 export { default as Page } from './Page';
@@ -21,3 +21,7 @@ export { default as GridCell } from './GridCell';
 export { default as DataRow } from './DataRow';
 export { default as ReportGrid } from './ReportGrid';
 export { default as WaterMark } from './WaterMark';
+
+export { default as PageFooter } from './PageFooter';
+export { default as PageHeader } from './PageHeader';
+export { default as RenderHtml } from './RenderHtml';

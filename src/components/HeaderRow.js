@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from '@react-pdf/renderer';
 import Block from './Block';
 import Text from './Text';
-import { colors, sizes } from '../../theme';
+import { colors, sizes } from '../theme';
 
 import GridCell from './GridCell';
 
@@ -13,7 +13,7 @@ const HeaderRow = ({ columns, style }) => {
     backgroundColor: colors.gray4,
     borderBottomWidth: 0.5,
     borderBottomColor: colors.gray,
-    ...style,
+    ...style
   });
 
   return (
@@ -28,7 +28,7 @@ const HeaderRow = ({ columns, style }) => {
 };
 
 HeaderRow.defaultProps = {
-  columns: [],
+  columns: []
 };
 
 export default HeaderRow;

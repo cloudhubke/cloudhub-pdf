@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet } from '@react-pdf/renderer';
 import Block from './Block';
-import { colors, sizes } from '../../theme';
+import { colors, sizes } from '../theme';
 
 const PageHeader = ({ style, children, ...props }) => {
   const footerStyles = StyleSheet.create({
     borderBottomWidth: 0.5,
     borderBottomColor: colors.gray2,
-    ...style,
+    ...style
   });
 
   return (

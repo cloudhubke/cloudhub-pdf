@@ -1,6 +1,6 @@
 import { StyleSheet } from '@react-pdf/renderer';
 
-import { colors } from '../../theme';
+import { colors } from '../theme';
 
 const useBlockStyles = ({
   name,
@@ -27,13 +27,13 @@ const useBlockStyles = ({
   opacity,
   ...otherprops
 }) => {
-  const handleMargins = margin => {
+  const handleMargins = (margin) => {
     if (typeof margin === 'number') {
       return {
         marginTop: margin,
         marginRight: margin,
         marginBottom: margin,
-        marginLeft: margin,
+        marginLeft: margin
       };
     }
 
@@ -45,41 +45,41 @@ const useBlockStyles = ({
             marginTop: margin[0],
             marginRight: margin[0],
             marginBottom: margin[0],
-            marginLeft: margin[0],
+            marginLeft: margin[0]
           };
         case 2:
           return {
             marginTop: margin[0],
             marginRight: margin[1],
             marginBottom: margin[0],
-            marginLeft: margin[1],
+            marginLeft: margin[1]
           };
         case 3:
           return {
             marginTop: margin[0],
             marginRight: margin[1],
             marginBottom: margin[2],
-            marginLeft: margin[1],
+            marginLeft: margin[1]
           };
         default:
           return {
             marginTop: margin[0],
             marginRight: margin[1],
             marginBottom: margin[2],
-            marginLeft: margin[3],
+            marginLeft: margin[3]
           };
       }
     }
     return null;
   };
 
-  const handlePaddings = padding => {
+  const handlePaddings = (padding) => {
     if (typeof padding === 'number') {
       return {
         paddingTop: padding,
         paddingRight: padding,
         paddingBottom: padding,
-        paddingLeft: padding,
+        paddingLeft: padding
       };
     }
 
@@ -91,28 +91,28 @@ const useBlockStyles = ({
             paddingTop: padding[0],
             paddingRight: padding[0],
             paddingBottom: padding[0],
-            paddingLeft: padding[0],
+            paddingLeft: padding[0]
           };
         case 2:
           return {
             paddingTop: padding[0],
             paddingRight: padding[1],
             paddingBottom: padding[0],
-            paddingLeft: padding[1],
+            paddingLeft: padding[1]
           };
         case 3:
           return {
             paddingTop: padding[0],
             paddingRight: padding[1],
             paddingBottom: padding[2],
-            paddingLeft: padding[1],
+            paddingLeft: padding[1]
           };
         default:
           return {
             paddingTop: padding[0],
             paddingRight: padding[1],
             paddingBottom: padding[2],
-            paddingLeft: padding[3],
+            paddingLeft: padding[3]
           };
       }
     }
@@ -129,7 +129,7 @@ const useBlockStyles = ({
       right: 0,
       left: 0,
       top: 0,
-      bottom: 0,
+      bottom: 0
     }),
     ...(column && styles.column),
     ...(wrap && { flexWrap: 'wrap' }),
@@ -144,7 +144,7 @@ const useBlockStyles = ({
     ...(space && { justifyContent: `space-${space}` }),
     ...(color && styles[color]), // predefined styles colors for backgroundColor
     ...(color && !styles[color] && { backgroundColor: color }), // custom backgroundColor
-    ...style, // rewrite predefined styles
+    ...style // rewrite predefined styles
   });
 
   return { blockStyles, otherprops };
@@ -155,31 +155,31 @@ export const styles = {
     flex: 1,
     display: 'flex',
     position: 'relative',
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   column: {
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   center: {
-    alignItems: 'center',
+    alignItems: 'center'
   },
   middle: {
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   left: {
-    alignItems: 'flex-start',
+    alignItems: 'flex-start'
   },
   right: {
-    alignItems: 'flex-end',
+    alignItems: 'flex-end'
   },
   top: {
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-start'
   },
   bottom: {
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   accent: { backgroundColor: colors.accent },
   primary: { backgroundColor: colors.primary },
@@ -225,11 +225,11 @@ export const styles = {
   dribbbleColor: { backgroundColor: colors.twitterColor },
   redditColor: { backgroundColor: colors.twitterColor },
   instagramColor: { backgroundColor: colors.twitterColor },
-  success: { backgroundColor: colors.successColor[0] },
-  info: { backgroundColor: colors.infoColor[0] },
-  rose: { backgroundColor: colors.roseColor[0] },
-  warning: { backgroundColor: colors.warningColor[0] },
-  danger: { backgroundColor: colors.dangerColor[0] },
+  success: { backgroundColor: colors.success },
+  info: { backgroundColor: colors.info },
+  rose: { backgroundColor: colors.rose },
+  warning: { backgroundColor: colors.warning },
+  danger: { backgroundColor: colors.danger }
 };
 
 export default useBlockStyles;

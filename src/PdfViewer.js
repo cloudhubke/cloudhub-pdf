@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react';
 
-import { PDFViewer, Font } from "@react-pdf/renderer";
+import { PDFViewer, Font } from '@react-pdf/renderer';
 
-import geomanistnormalfont from "./fonts/geomanist/geomanist-regular.ttf";
-import geomanistmediumfont from "./fonts/geomanist/geomanist-medium.ttf";
-import geomanistbookfont from "../fonts/geomanist/geomanist-book.ttf";
+import geomanistnormalfont from './fonts/geomanist/geomanist-regular.ttf';
+import geomanistmediumfont from './fonts/geomanist/geomanist-medium.ttf';
+import geomanistbookfont from './fonts/geomanist/geomanist-book.ttf';
 
 Font.register({
-  family: "geomanist",
+  family: 'geomanist',
   fonts: [
     {
       src: geomanistnormalfont,
-      fontWeight: "normal",
+      fontWeight: 'normal'
     },
     {
       src: geomanistmediumfont,
-      fontWeight: "semibold",
+      fontWeight: 'semibold'
     },
 
     {
       src: geomanistbookfont,
-      fontWeight: "bold",
-    },
-  ],
+      fontWeight: 'bold'
+    }
+  ]
 });
 
 const PdfViewer = ({ children }) => {
@@ -30,9 +30,9 @@ const PdfViewer = ({ children }) => {
   return (
     <PDFViewer
       style={{
-        display: "flex",
-        flexDirection: "column",
-        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1
       }}
     >
       {children}

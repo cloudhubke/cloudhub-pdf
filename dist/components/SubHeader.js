@@ -13,7 +13,7 @@ var _Block = _interopRequireDefault(require("./Block"));
 
 var _Text = _interopRequireDefault(require("./Text"));
 
-var _theme = require("../../theme");
+var _theme = require("../theme");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

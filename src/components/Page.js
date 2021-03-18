@@ -1,20 +1,20 @@
 import React from 'react';
 import { Page as PdfPage, StyleSheet } from '@react-pdf/renderer';
-import { colors } from '../../theme';
+import { colors } from '../theme';
 
 // Create Document Component
 const Page = ({ style, color, ...props }) => {
   const pageStyles = StyleSheet.create({
     ...(color && styles[color]), // predefined styles colors for backgroundColor
     ...(color && !styles[color] && { backgroundColor: color }), // custom backgroundColor
-    ...style, // rewrite predefined styles
+    ...style // rewrite predefined styles
   });
 
   return <PdfPage style={pageStyles} {...props} />;
 };
 
 Page.defaultProps = {
-  size: 'A4',
+  size: 'A4'
 };
 
 const styles = {
@@ -62,11 +62,11 @@ const styles = {
   dribbbleColor: { backgroundColor: colors.twitterColor },
   redditColor: { backgroundColor: colors.twitterColor },
   instagramColor: { backgroundColor: colors.twitterColor },
-  success: { backgroundColor: colors.successColor[0] },
-  info: { backgroundColor: colors.infoColor[0] },
-  rose: { backgroundColor: colors.roseColor[0] },
-  warning: { backgroundColor: colors.warningColor[0] },
-  danger: { backgroundColor: colors.dangerColor[0] },
+  success: { backgroundColor: colors.success },
+  info: { backgroundColor: colors.info },
+  rose: { backgroundColor: colors.rose },
+  warning: { backgroundColor: colors.warning },
+  danger: { backgroundColor: colors.danger }
 };
 
 export default Page;

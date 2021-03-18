@@ -1,7 +1,7 @@
 import React from 'react';
 import Block from './Block';
 import Text from './Text';
-import { colors, sizes } from '../../theme';
+import { colors, sizes } from '../theme';
 
 const ReportFooter = ({ signoff, left, right, ...props }) => (
   <Block

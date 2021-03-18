@@ -1,31 +1,31 @@
 import { StyleSheet } from '@react-pdf/renderer';
 
-import { colors } from '../../theme';
+import { colors } from '../theme';
 
 const styles = {
   // default style
   text: {
-    color: colors.darkGray,
+    color: colors.black,
     fontFamily: 'geomanist',
-    fontSize: 10,
-    lineHeight: 1.2,
+    fontSize: 11,
+    lineHeight: 1.2
   },
   // variations
   regular: {
-    fontWeight: 'normal',
+    fontWeight: 'normal'
   },
   bold: { fontWeight: 'bold' },
 
   semibold: {
-    fontWeight: 'semibold',
+    fontWeight: 'semibold'
   },
   medium: {
-    fontWeight: 'medium',
+    fontWeight: 'medium'
   },
   light: { fontWeight: 'thin' },
   normal: { fontSize: 12, fontWeight: 'normal' },
   thin: {
-    fontWeight: 'thin',
+    fontWeight: 'thin'
   },
   // position
   center: { textAlign: 'center' },
@@ -91,7 +91,7 @@ const styles = {
   subHeader: { fontSize: 12 },
   body: { fontSize: 9 },
   caption: { fontSize: 8 },
-  small: { fontSize: 9 },
+  small: { fontSize: 9 }
 };
 
 const useTextStyles = ({
@@ -204,7 +204,7 @@ const useTextStyles = ({
     ...(noWrap && {
       whiteSpace: 'nowrap',
       overflow: 'hidden',
-      textOverflow: 'ellipsis',
+      textOverflow: 'ellipsis'
     }),
     ...(fullWidth && { minWidth: '100%' }),
     ...(spacing && { letterSpacing: spacing }),
@@ -267,7 +267,7 @@ const useTextStyles = ({
     ...(rose && styles.rose),
     ...(warning && styles.warning),
     ...(danger && styles.danger),
-    ...style, // rewrite predefined styles
+    ...style // rewrite predefined styles
   });
 
   return { textStyles, otherprops };

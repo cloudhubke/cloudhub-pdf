@@ -13,7 +13,7 @@ var _Block = _interopRequireDefault(require("./Block"));
 
 var _Text = _interopRequireDefault(require("./Text"));
 
-var _theme = require("../../theme");
+var _theme = require("../theme");
 
 var _GridCell = _interopRequireDefault(require("./GridCell"));
 

@@ -1265,6 +1265,10 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+himalaya@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/himalaya/-/himalaya-1.1.0.tgz#31724ae9d35714cd7c6f4be94888953f3604606a"
+
 hyphen@^1.1.1:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/hyphen/-/hyphen-1.6.2.tgz#321d794d92b778f39cb5db740a575c092463978c"

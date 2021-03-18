@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from '@react-pdf/renderer';
 import Block from './Block';
 import Text from './Text';
-import { colors, sizes } from '../../theme';
+import { colors, sizes } from '../theme';
 
 import GridCell from './GridCell';
 
@@ -15,7 +15,7 @@ const SummaryRow = ({ columns, data, summary, style, ...props }) => {
     borderTopColor: colors.darkGray,
     borderBottomWidth: 0.5,
     borderBottomColor: colors.darkGray,
-    ...style,
+    ...style
   });
 
   return (
@@ -47,7 +47,7 @@ const SummaryRow = ({ columns, data, summary, style, ...props }) => {
 
 SummaryRow.defaultProps = {
   columns: [],
-  summary: {},
+  summary: {}
 };
 
 export default SummaryRow;

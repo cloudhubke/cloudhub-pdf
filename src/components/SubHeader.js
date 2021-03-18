@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import Block from './Block';
 import Text from './Text';
-import { colors, sizes } from '../../theme';
+import { colors, sizes } from '../theme';
 
 const SubHeader = ({ title, left, right }) => {
   const now = `${moment().format('DD MMM, YYYY')}`;

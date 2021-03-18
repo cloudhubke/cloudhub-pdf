@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _theme = require("../../theme");
+var _theme = require("../theme");
 
 var _HeaderRow = _interopRequireDefault(require("./HeaderRow"));
 

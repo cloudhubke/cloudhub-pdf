@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from '@react-pdf/renderer';
 import Block from './Block';
-import { colors, sizes } from '../../theme';
+import { colors, sizes } from '../theme';
 
 const ReportHeader = ({ logo, left, middle, right }) => (
   <Block name="HEADER" flex={false}>
@@ -18,7 +18,7 @@ const ReportHeader = ({ logo, left, middle, right }) => (
               src={logo}
               style={{
                 height: '100%',
-                objectFit: 'contain',
+                objectFit: 'contain'
               }}
             />
           </Block>

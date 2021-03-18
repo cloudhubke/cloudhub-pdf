@@ -13,21 +13,21 @@ var _geomanistRegular = _interopRequireDefault(require("./fonts/geomanist/geoman
 
 var _geomanistMedium = _interopRequireDefault(require("./fonts/geomanist/geomanist-medium.ttf"));
 
-var _geomanistBook = _interopRequireDefault(require("../fonts/geomanist/geomanist-book.ttf"));
+var _geomanistBook = _interopRequireDefault(require("./fonts/geomanist/geomanist-book.ttf"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _renderer.Font.register({
-  family: "geomanist",
+  family: 'geomanist',
   fonts: [{
     src: _geomanistRegular.default,
-    fontWeight: "normal"
+    fontWeight: 'normal'
   }, {
     src: _geomanistMedium.default,
-    fontWeight: "semibold"
+    fontWeight: 'semibold'
   }, {
     src: _geomanistBook.default,
-    fontWeight: "bold"
+    fontWeight: 'bold'
   }]
 });
 
@@ -36,8 +36,8 @@ var PdfViewer = function PdfViewer(_ref) {
   var store = {};
   return /*#__PURE__*/_react.default.createElement(_renderer.PDFViewer, {
     style: {
-      display: "flex",
-      flexDirection: "column",
+      display: 'flex',
+      flexDirection: 'column',
       flex: 1
     }
   }, children);
