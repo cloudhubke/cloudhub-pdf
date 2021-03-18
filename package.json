@@ -1,6 +1,6 @@
 {
   "name": "cloudhub-pdf",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Components for generating pdf reports ",
   "main": "dist/index.js",
   "files": [
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@react-pdf/renderer": "^1.6.3",
+    "detect-node": "^2.0.5",
     "himalaya": "^1.1.0",
     "material-ui-colors": "^1.0.0"
   },

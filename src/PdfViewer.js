@@ -1,42 +1,73 @@
 import React from 'react';
+import { PDFViewer, Document, Font } from '@react-pdf/renderer';
+import PdfThemeProvider from './theme/PdfThemeProvider';
+var isNode = require('detect-node');
 
-import { PDFViewer } from '@react-pdf/renderer';
+let geomanistnormalfont;
+let geomanistmediumfont;
+let geomanistbookfont;
 
-// import geomanistnormalfont from './fonts/geomanist/geomanist-regular.ttf';
-// import geomanistmediumfont from './fonts/geomanist/geomanist-medium.ttf';
-// import geomanistbookfont from './fonts/geomanist/geomanist-book.ttf';
+if (isNode) {
+  const path = require('path');
+  geomanistnormalfont = path.join(
+    __dirname,
+    './assets/fonts/geomanist/geomanist-regular.ttf'
+  );
+  geomanistmediumfont = path.join(
+    __dirname,
+    './assets/fonts/geomanist/geomanist-medium.ttf'
+  );
+  geomanistbookfont = path.join(
+    __dirname,
+    './assets/fonts/geomanist/geomanist-book.ttf'
+  );
+} else {
+  geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf');
+  geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf');
+  geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf');
+}
 
-// Font.register({
-//   family: 'geomanist',
-//   fonts: [
-//     {
-//       src: geomanistnormalfont,
-//       fontWeight: 'normal'
-//     },
-//     {
-//       src: geomanistmediumfont,
-//       fontWeight: 'semibold'
-//     },
+Font.register({
+  family: 'geomanist',
+  fonts: [
+    {
+      src: geomanistnormalfont,
+      fontWeight: 'normal'
+    },
+    {
+      src: geomanistmediumfont,
+      fontWeight: 'semibold'
+    },
 
-//     {
-//       src: geomanistbookfont,
-//       fontWeight: 'bold'
-//     }
-//   ]
-// });
+    {
+      src: geomanistbookfont,
+      fontWeight: 'bold'
+    }
+  ]
+});
 
-const PdfViewer = ({ children }) => {
+const PdfViewer = ({ children, ...props }) => {
   const store = {};
+
+  if (isNode) {
+    return (
+      <PdfThemeProvider {...props}>
+        <Document>{children}</Document>
+      </PdfThemeProvider>
+    );
+  }
   return (
-    <PDFViewer
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        flex: 1
-      }}
-    >
-      {children}
-    </PDFViewer>
+    <PdfThemeProvider {...props}>
+      <PDFViewer
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: 1
+        }}
+      >
+        <Document>{children}</Document>
+      </PDFViewer>
+    </PdfThemeProvider>
   );
 };
 
