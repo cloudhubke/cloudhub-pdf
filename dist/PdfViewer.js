@@ -9,27 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _renderer = require("@react-pdf/renderer");
 
-var _geomanistRegular = _interopRequireDefault(require("./fonts/geomanist/geomanist-regular.ttf"));
-
-var _geomanistMedium = _interopRequireDefault(require("./fonts/geomanist/geomanist-medium.ttf"));
-
-var _geomanistBook = _interopRequireDefault(require("./fonts/geomanist/geomanist-book.ttf"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_renderer.Font.register({
-  family: 'geomanist',
-  fonts: [{
-    src: _geomanistRegular.default,
-    fontWeight: 'normal'
-  }, {
-    src: _geomanistMedium.default,
-    fontWeight: 'semibold'
-  }, {
-    src: _geomanistBook.default,
-    fontWeight: 'bold'
-  }]
-});
 
 var PdfViewer = function PdfViewer(_ref) {
   var children = _ref.children;
