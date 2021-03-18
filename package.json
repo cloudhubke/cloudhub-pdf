@@ -1,6 +1,6 @@
 {
   "name": "cloudhub-pdf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Components for generating pdf reports ",
   "main": "dist/index.js",
   "files": [
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@react-pdf/renderer": "^1.6.3",
-    "himalaya": "^1.1.0"
+    "himalaya": "^1.1.0",
+    "material-ui-colors": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "7.2.0",

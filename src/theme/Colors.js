@@ -17,8 +17,8 @@ import {
   deepOrange,
   brown,
   grey,
-  blueGrey,
-} from '@material-ui/core/colors';
+  blueGrey
+} from 'material-ui-colors';
 
 const colors = {
   primary: '#332B98', // '#0976b4',
@@ -120,7 +120,7 @@ const colors = {
   info: '#00acc1',
   rose: '#e91e63',
   warning: '#ff9800',
-  danger: '#f44336',
+  danger: '#f44336'
 };
 
 export default colors;
