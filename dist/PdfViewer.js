@@ -11,6 +11,26 @@ var _renderer = require("@react-pdf/renderer");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import geomanistnormalfont from './fonts/geomanist/geomanist-regular.ttf';
+// import geomanistmediumfont from './fonts/geomanist/geomanist-medium.ttf';
+// import geomanistbookfont from './fonts/geomanist/geomanist-book.ttf';
+// Font.register({
+//   family: 'geomanist',
+//   fonts: [
+//     {
+//       src: geomanistnormalfont,
+//       fontWeight: 'normal'
+//     },
+//     {
+//       src: geomanistmediumfont,
+//       fontWeight: 'semibold'
+//     },
+//     {
+//       src: geomanistbookfont,
+//       fontWeight: 'bold'
+//     }
+//   ]
+// });
 var PdfViewer = function PdfViewer(_ref) {
   var children = _ref.children;
   var store = {};

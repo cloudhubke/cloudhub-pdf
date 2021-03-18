@@ -61,13 +61,16 @@ var RenderHtml = function RenderHtml(_ref2) {
   var html = _ref2.html,
       childObjects = _ref2.childObjects;
   var jsonarray = flattenElements((0, _himalaya.parse)(html));
+  var flatIndex = 0;
 
   var renderJson = function renderJson() {
     var i = -1;
     return jsonarray.map(function (item, index) {
+      flatIndex++;
+
       if (item.content === '\n' && i > 0) {
         return /*#__PURE__*/_react.default.createElement(_Text.default, {
-          key: index
+          key: "".concat(item.tagName).concat(flatIndex)
         }, "\n\n");
       }
 
@@ -80,13 +83,15 @@ var RenderHtml = function RenderHtml(_ref2) {
       }
 
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, {
-        key: index
+        key: "".concat(item.tagName).concat(flatIndex)
       }, item.tagName === 'li' && /*#__PURE__*/_react.default.createElement(_Text.default, {
+        key: "li-".concat(flatIndex, "a"),
         bold: true,
         style: {
           paddingRight: 10
         }
       }, "".concat(alphabets[i], ")  ")), /*#__PURE__*/_react.default.createElement(_Text.default, {
+        key: "li-".concat(flatIndex, "b"),
         bold: item.bold,
         black: true
       }, item.content));
@@ -94,6 +99,7 @@ var RenderHtml = function RenderHtml(_ref2) {
   };
 
   return /*#__PURE__*/_react.default.createElement(_Text.default, {
+    key: "main",
     style: {
       textAlign: 'justify'
     }

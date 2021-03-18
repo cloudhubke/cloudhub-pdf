@@ -64,11 +64,14 @@ const flattenElements = (html) => {
 const RenderHtml = ({ html, childObjects }) => {
   const jsonarray = flattenElements(parse(html));
 
+  let flatIndex = 0;
+
   const renderJson = () => {
     let i = -1;
     return jsonarray.map((item, index) => {
+      flatIndex++;
       if (item.content === '\n' && i > 0) {
-        return <Text key={index}>{`\n\n`}</Text>;
+        return <Text key={`${item.tagName}${flatIndex}`}>{`\n\n`}</Text>;
       }
       if (childObjects[item.content]) {
         return childObjects[item.content];
@@ -78,14 +81,14 @@ const RenderHtml = ({ html, childObjects }) => {
       }
 
       return (
-        <React.Fragment key={index}>
+        <React.Fragment key={`${item.tagName}${flatIndex}`}>
           {item.tagName === 'li' && (
-            <Text bold style={{ paddingRight: 10 }}>
+            <Text key={`li-${flatIndex}a`} bold style={{ paddingRight: 10 }}>
               {`${alphabets[i]})  `}
             </Text>
           )}
 
-          <Text bold={item.bold} black>
+          <Text key={`li-${flatIndex}b`} bold={item.bold} black>
             {item.content}
           </Text>
         </React.Fragment>
@@ -93,7 +96,11 @@ const RenderHtml = ({ html, childObjects }) => {
     });
   };
 
-  return <Text style={{ textAlign: 'justify' }}>{renderJson()}</Text>;
+  return (
+    <Text key="main" style={{ textAlign: 'justify' }}>
+      {renderJson()}
+    </Text>
+  );
 };
 
 export default RenderHtml;
