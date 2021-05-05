@@ -17,27 +17,29 @@ var _theme = require("../theme");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 var SubHeader = function SubHeader(_ref) {
   var title = _ref.title,
       left = _ref.left,
-      right = _ref.right;
+      right = _ref.right,
+      topContainerProps = _ref.topContainerProps,
+      bottomContainerProps = _ref.bottomContainerProps;
   var now = "".concat((0, _moment.default)().format('DD MMM, YYYY'));
   return /*#__PURE__*/_react.default.createElement(_Block.default, {
     name: "SUB-HEADER",
     flex: false
-  }, /*#__PURE__*/_react.default.createElement(_Block.default, {
-    padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5],
+  }, /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     color: _theme.colors.gray4
-  }, title || /*#__PURE__*/_react.default.createElement(_Block.default, {
+  }, topContainerProps), title || /*#__PURE__*/_react.default.createElement(_Block.default, {
     right: true
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     h6: true,
     thin: true
-  }, now))), /*#__PURE__*/_react.default.createElement(_Block.default, {
+  }, now))), /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     flex: false,
-    row: true,
-    padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5, 0, _theme.sizes.padding * 2]
-  }, /*#__PURE__*/_react.default.createElement(_Block.default, null, left), /*#__PURE__*/_react.default.createElement(_Block.default, null, right)));
+    row: true
+  }, bottomContainerProps), /*#__PURE__*/_react.default.createElement(_Block.default, null, left), /*#__PURE__*/_react.default.createElement(_Block.default, null, right)));
 };
 
 var _default = SubHeader;
