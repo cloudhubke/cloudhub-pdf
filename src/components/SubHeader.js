@@ -9,12 +9,13 @@ const SubHeader = ({
   left,
   right,
   topContainerProps,
-  bottomContainerProps
+  bottomContainerProps,
+  ...props
 }) => {
   const now = `${moment().format('DD MMM, YYYY')}`;
 
   return (
-    <Block name="SUB-HEADER" flex={false}>
+    <Block name="SUB-HEADER" flex={false} {...props}>
       <Block color={colors.gray4} {...topContainerProps}>
         {title || (
           <Block right>
