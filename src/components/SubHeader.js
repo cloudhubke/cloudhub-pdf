@@ -4,15 +4,18 @@ import Block from './Block';
 import Text from './Text';
 import { colors, sizes } from '../theme';
 
-const SubHeader = ({ title, left, right }) => {
+const SubHeader = ({
+  title,
+  left,
+  right,
+  topContainerProps,
+  bottomContainerProps
+}) => {
   const now = `${moment().format('DD MMM, YYYY')}`;
 
   return (
     <Block name="SUB-HEADER" flex={false}>
-      <Block
-        padding={[sizes.padding / 2, sizes.padding * 1.5]}
-        color={colors.gray4}
-      >
+      <Block color={colors.gray4} {...topContainerProps}>
         {title || (
           <Block right>
             <Text h6 thin>
@@ -21,11 +24,7 @@ const SubHeader = ({ title, left, right }) => {
           </Block>
         )}
       </Block>
-      <Block
-        flex={false}
-        row
-        padding={[sizes.padding / 2, sizes.padding * 1.5, 0, sizes.padding * 2]}
-      >
+      <Block flex={false} row {...bottomContainerProps}>
         <Block>{left}</Block>
         <Block>{right}</Block>
       </Block>
