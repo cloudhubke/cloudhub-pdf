@@ -36,7 +36,9 @@ var GridCell = function GridCell(_ref) {
     height: '100%'
   }, width && {
     width: width
-  }), style));
+  }), {}, {
+    padding: 2
+  }, style));
 
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     flex: !width,

@@ -35,9 +35,9 @@ const SummaryRow = ({ columns, data, summary, style, ...props }) => {
         }
         return (
           <GridCell key={`${name}`} width={width}>
-            {
-              //
-            }
+            <Text bold darkGray>
+              {summaryFunction}
+            </Text>
           </GridCell>
         );
       })}

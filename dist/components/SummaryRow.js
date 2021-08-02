@@ -75,7 +75,10 @@ var SummaryRow = function SummaryRow(_ref) {
     return /*#__PURE__*/_react.default.createElement(_GridCell.default, {
       key: "".concat(name),
       width: width
-    });
+    }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+      bold: true,
+      darkGray: true
+    }, summaryFunction));
   }));
 };
 

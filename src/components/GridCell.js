@@ -6,7 +6,8 @@ const GridCell = ({ title, width, style, children, ...props }) => {
   const cellStyles = StyleSheet.create({
     height: '100%',
     ...(width && { width }),
-    ...style,
+    padding: 2,
+    ...style
   });
 
   return (
@@ -18,7 +19,7 @@ const GridCell = ({ title, width, style, children, ...props }) => {
 
 GridCell.defaultProps = {
   cellComponent: null,
-  middle: true,
+  middle: true
 };
 
 export default GridCell;

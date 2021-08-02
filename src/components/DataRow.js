@@ -8,7 +8,7 @@ import GridCell from './GridCell';
 
 const DataRow = ({ row, datarow, cellComponent, style, ...props }) => {
   const rowStyles = StyleSheet.create({
-    height: 28,
+    // height: 28,
     borderBottomWidth: 0.5,
     borderBottomColor: colors.gray,
     ...style
@@ -26,7 +26,7 @@ const DataRow = ({ row, datarow, cellComponent, style, ...props }) => {
 
       return (
         <GridCell key={key} width={width}>
-          <Text bold>{`${value || ''}`}</Text>
+          <Text>{`${value || ''}`}</Text>
         </GridCell>
       );
     });

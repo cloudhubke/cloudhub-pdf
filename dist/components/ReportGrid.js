@@ -31,7 +31,8 @@ var ReportGrid = function ReportGrid(_ref) {
       summary = _ref.summary,
       rowComponent = _ref.rowComponent,
       cellComponent = _ref.cellComponent,
-      props = _objectWithoutProperties(_ref, ["columns", "data", "summary", "rowComponent", "cellComponent"]);
+      rowStyle = _ref.rowStyle,
+      props = _objectWithoutProperties(_ref, ["columns", "data", "summary", "rowComponent", "cellComponent", "rowStyle"]);
 
   return (
     /*#__PURE__*/
@@ -65,7 +66,8 @@ var ReportGrid = function ReportGrid(_ref) {
       data: data,
       columns: columns,
       rowComponent: rowComponent,
-      cellComponent: cellComponent
+      cellComponent: cellComponent,
+      rowStyle: rowStyle
     }), /*#__PURE__*/_react.default.createElement(_SummaryRow.default, {
       data: data,
       columns: columns,

@@ -11,6 +11,7 @@ const ReportGrid = ({
   summary,
   rowComponent,
   cellComponent,
+  rowStyle,
   ...props
 }) => (
   // const rowComponent = ({ index, ...props }) => (
@@ -48,6 +49,7 @@ const ReportGrid = ({
       columns={columns}
       rowComponent={rowComponent}
       cellComponent={cellComponent}
+      rowStyle={rowStyle}
     />
     <SummaryRow data={data} columns={columns} summary={summary} />
   </Block>

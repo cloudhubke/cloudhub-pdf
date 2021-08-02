@@ -39,7 +39,7 @@ var DataRow = function DataRow(_ref) {
       props = _objectWithoutProperties(_ref, ["row", "datarow", "cellComponent", "style"]);
 
   var rowStyles = _renderer.StyleSheet.create(_objectSpread({
-    height: 28,
+    // height: 28,
     borderBottomWidth: 0.5,
     borderBottomColor: _theme.colors.gray
   }, style));
@@ -64,9 +64,7 @@ var DataRow = function DataRow(_ref) {
       return /*#__PURE__*/_react.default.createElement(_GridCell.default, {
         key: key,
         width: width
-      }, /*#__PURE__*/_react.default.createElement(_Text.default, {
-        bold: true
-      }, "".concat(value || '')));
+      }, /*#__PURE__*/_react.default.createElement(_Text.default, null, "".concat(value || '')));
     });
   };
 
