@@ -93,24 +93,6 @@ Object.defineProperty(exports, "HeaderRow", {
     return _HeaderRow.default;
   }
 });
-Object.defineProperty(exports, "GridCell", {
-  enumerable: true,
-  get: function get() {
-    return _GridCell.default;
-  }
-});
-Object.defineProperty(exports, "DataRow", {
-  enumerable: true,
-  get: function get() {
-    return _DataRow.default;
-  }
-});
-Object.defineProperty(exports, "ReportGrid", {
-  enumerable: true,
-  get: function get() {
-    return _ReportGrid.default;
-  }
-});
 Object.defineProperty(exports, "WaterMark", {
   enumerable: true,
   get: function get() {
@@ -133,6 +115,42 @@ Object.defineProperty(exports, "RenderHtml", {
   enumerable: true,
   get: function get() {
     return _RenderHtml.default;
+  }
+});
+Object.defineProperty(exports, "ReportGrid", {
+  enumerable: true,
+  get: function get() {
+    return _ReportGrid.default;
+  }
+});
+Object.defineProperty(exports, "DataRow", {
+  enumerable: true,
+  get: function get() {
+    return _DataRow.default;
+  }
+});
+Object.defineProperty(exports, "GridCell", {
+  enumerable: true,
+  get: function get() {
+    return _GridCell.default;
+  }
+});
+Object.defineProperty(exports, "SummaryRow", {
+  enumerable: true,
+  get: function get() {
+    return _SummaryRow.default;
+  }
+});
+Object.defineProperty(exports, "useTextStyles", {
+  enumerable: true,
+  get: function get() {
+    return _useTextStyles.default;
+  }
+});
+Object.defineProperty(exports, "useBlockStyles", {
+  enumerable: true,
+  get: function get() {
+    return _useBlockStyles.default;
   }
 });
 
@@ -158,12 +176,6 @@ var _Text = _interopRequireDefault(require("./Text"));
 
 var _HeaderRow = _interopRequireDefault(require("./HeaderRow"));
 
-var _GridCell = _interopRequireDefault(require("./GridCell"));
-
-var _DataRow = _interopRequireDefault(require("./DataRow"));
-
-var _ReportGrid = _interopRequireDefault(require("./ReportGrid"));
-
 var _WaterMark = _interopRequireDefault(require("./WaterMark"));
 
 var _PageFooter = _interopRequireDefault(require("./PageFooter"));
@@ -171,5 +183,17 @@ var _PageFooter = _interopRequireDefault(require("./PageFooter"));
 var _PageHeader = _interopRequireDefault(require("./PageHeader"));
 
 var _RenderHtml = _interopRequireDefault(require("./RenderHtml"));
+
+var _ReportGrid = _interopRequireDefault(require("./ReportGrid"));
+
+var _DataRow = _interopRequireDefault(require("./DataRow"));
+
+var _GridCell = _interopRequireDefault(require("./GridCell"));
+
+var _SummaryRow = _interopRequireDefault(require("./SummaryRow"));
+
+var _useTextStyles = _interopRequireDefault(require("./useTextStyles"));
+
+var _useBlockStyles = _interopRequireDefault(require("./useBlockStyles"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

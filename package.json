@@ -1,6 +1,6 @@
 {
   "name": "cloudhub-pdf",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Components for generating pdf reports ",
   "main": "dist/index.js",
   "files": [
