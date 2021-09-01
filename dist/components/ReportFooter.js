@@ -37,7 +37,7 @@ var ReportFooter = function ReportFooter(_ref) {
     flex: false,
     row: true,
     padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5, 0, _theme.sizes.padding * 2]
-  }, /*#__PURE__*/_react.default.createElement(_Block.default, null, left), /*#__PURE__*/_react.default.createElement(_Block.default, null, right)), signoff || /*#__PURE__*/_react.default.createElement(_Block.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Block.default, null, left), /*#__PURE__*/_react.default.createElement(_Block.default, null, right)), typeof signoff === 'string' ? /*#__PURE__*/_react.default.createElement(_Block.default, {
     padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5],
     color: _theme.colors.gray4,
     style: {
@@ -48,7 +48,7 @@ var ReportFooter = function ReportFooter(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     h6: true,
     thin: true
-  }, "Thank you for your business"))));
+  }, signoff || 'Thank you for your business'))) : signoff);
 };
 
 var _default = ReportFooter;

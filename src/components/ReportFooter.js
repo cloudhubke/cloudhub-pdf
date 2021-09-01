@@ -18,7 +18,7 @@ const ReportFooter = ({ signoff, left, right, ...props }) => (
       <Block>{left}</Block>
       <Block>{right}</Block>
     </Block>
-    {signoff || (
+    {typeof signoff === 'string' ? (
       <Block
         padding={[sizes.padding / 2, sizes.padding * 1.5]}
         color={colors.gray4}
@@ -26,10 +26,12 @@ const ReportFooter = ({ signoff, left, right, ...props }) => (
       >
         <Block center>
           <Text h6 thin>
-            Thank you for your business
+            {signoff || 'Thank you for your business'}
           </Text>
         </Block>
       </Block>
+    ) : (
+      signoff
     )}
   </Block>
 );
