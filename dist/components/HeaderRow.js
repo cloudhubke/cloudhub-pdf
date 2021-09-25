@@ -45,13 +45,18 @@ var HeaderRow = function HeaderRow(_ref) {
     fixed: true
   }, columns.map(function (_ref2) {
     var title = _ref2.title,
-        width = _ref2.width;
+        width = _ref2.width,
+        _ref2$textStyle = _ref2.textStyle,
+        textStyle = _ref2$textStyle === void 0 ? {
+      textAlign: 'left'
+    } : _ref2$textStyle;
     return /*#__PURE__*/_react.default.createElement(_GridCell.default, {
       key: "".concat(title),
       title: title,
       width: width
     }, /*#__PURE__*/_react.default.createElement(_Text.default, {
-      bold: true
+      bold: true,
+      style: _objectSpread({}, textStyle)
     }, title));
   }));
 };

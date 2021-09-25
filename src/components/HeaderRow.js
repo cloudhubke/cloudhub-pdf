@@ -18,9 +18,11 @@ const HeaderRow = ({ columns, style }) => {
 
   return (
     <Block flex={false} row middle style={rowStyles} fixed>
-      {columns.map(({ title, width }) => (
+      {columns.map(({ title, width, textStyle = { textAlign: 'left' } }) => (
         <GridCell key={`${title}`} title={title} width={width}>
-          <Text bold>{title}</Text>
+          <Text bold style={{ ...textStyle }}>
+            {title}
+          </Text>
         </GridCell>
       ))}
     </Block>

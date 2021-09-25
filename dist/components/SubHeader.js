@@ -33,19 +33,20 @@ var SubHeader = function SubHeader(_ref) {
 
   var now = "".concat((0, _moment.default)().format('DD MMM, YYYY'));
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
-    name: "SUB-HEADER",
+    color: _theme.colors.gray4,
     flex: false
   }, props), /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
-    color: _theme.colors.gray4
-  }, topContainerProps), title || /*#__PURE__*/_react.default.createElement(_Block.default, {
+    flex: false,
+    row: true
+  }, topContainerProps), /*#__PURE__*/_react.default.createElement(_Block.default, null, left), /*#__PURE__*/_react.default.createElement(_Block.default, null, right)), /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
+    color: _theme.colors.gray2,
+    padding: [_theme.sizes.padding, 0]
+  }, bottomContainerProps), title || /*#__PURE__*/_react.default.createElement(_Block.default, {
     right: true
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     h6: true,
     thin: true
-  }, now))), /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
-    flex: false,
-    row: true
-  }, bottomContainerProps), /*#__PURE__*/_react.default.createElement(_Block.default, null, left), /*#__PURE__*/_react.default.createElement(_Block.default, null, right)));
+  }, now))));
 };
 
 var _default = SubHeader;

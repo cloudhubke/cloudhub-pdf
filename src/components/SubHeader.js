@@ -15,8 +15,16 @@ const SubHeader = ({
   const now = `${moment().format('DD MMM, YYYY')}`;
 
   return (
-    <Block name="SUB-HEADER" flex={false} {...props}>
-      <Block color={colors.gray4} {...topContainerProps}>
+    <Block color={colors.gray4} flex={false} {...props}>
+      <Block flex={false} row {...topContainerProps}>
+        <Block>{left}</Block>
+        <Block>{right}</Block>
+      </Block>
+      <Block
+        color={colors.gray2}
+        padding={[sizes.padding, 0]}
+        {...bottomContainerProps}
+      >
         {title || (
           <Block right>
             <Text h6 thin>
@@ -24,10 +32,6 @@ const SubHeader = ({
             </Text>
           </Block>
         )}
-      </Block>
-      <Block flex={false} row {...bottomContainerProps}>
-        <Block>{left}</Block>
-        <Block>{right}</Block>
       </Block>
     </Block>
   );
