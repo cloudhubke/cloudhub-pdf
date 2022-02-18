@@ -1,6 +1,6 @@
 {
   "name": "cloudhub-pdf",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Components for generating pdf reports ",
   "main": "dist/index.js",
   "files": [
@@ -28,7 +28,14 @@
     "babel-plugin-transform-imports": "^2.0.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "babel-eslint": "10.0.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint": "5.16.0",
+    "eslint-plugin-baseui": "9.112.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "7.13.0"
   },
   "keywords": [],
   "author": "Bernard Gaitho <gaithoben@gmail.com> (http://github.com/gaithoben)",
