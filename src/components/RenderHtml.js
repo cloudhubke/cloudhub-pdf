@@ -1,13 +1,6 @@
 import React from 'react';
-import Text from './Text';
 import { parse } from 'himalaya';
-import Block from './Block';
-import { PdfView } from './';
-import { sizes } from '../theme';
-
-const RenderText = ({ item }) => {
-  return <Text>{item.content}</Text>;
-};
+import Text from './Text';
 
 const alphabets = [
   'a',
@@ -39,7 +32,7 @@ const alphabets = [
 ];
 
 const flattenElements = (html) => {
-  let arr = [];
+  const arr = [];
   const getJson = (elements, attributes = {}) => {
     elements.map((item, index) => {
       if (item.children) {
@@ -50,7 +43,7 @@ const flattenElements = (html) => {
         });
       }
       if (item.content) {
-        item.content = `${item.content}`.replace(/&nbsp;/g, ` `);
+        item.content = `${item.content}`.replace(/&nbsp;/g, ' ');
         arr.push({ ...item, ...attributes });
       }
     });
@@ -71,7 +64,7 @@ const RenderHtml = ({ html, childObjects }) => {
     return jsonarray.map((item, index) => {
       flatIndex++;
       if (item.content === '\n' && i > 0) {
-        return <Text key={`${item.tagName}${flatIndex}`}>{`\n\n`}</Text>;
+        return <Text key={`${item.tagName}${flatIndex}`}>{'\n\n'}</Text>;
       }
       if (childObjects[item.content]) {
         return childObjects[item.content];

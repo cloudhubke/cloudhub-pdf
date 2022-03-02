@@ -99,6 +99,18 @@ Object.defineProperty(exports, "WaterMark", {
     return _WaterMark.default;
   }
 });
+Object.defineProperty(exports, "Barcode", {
+  enumerable: true,
+  get: function get() {
+    return _Barcode.default;
+  }
+});
+Object.defineProperty(exports, "QRCode", {
+  enumerable: true,
+  get: function get() {
+    return _QRCode.default;
+  }
+});
 Object.defineProperty(exports, "PageFooter", {
   enumerable: true,
   get: function get() {
@@ -177,6 +189,10 @@ var _Text = _interopRequireDefault(require("./Text"));
 var _HeaderRow = _interopRequireDefault(require("./HeaderRow"));
 
 var _WaterMark = _interopRequireDefault(require("./WaterMark"));
+
+var _Barcode = _interopRequireDefault(require("./Barcode"));
+
+var _QRCode = _interopRequireDefault(require("./QRCode"));
 
 var _PageFooter = _interopRequireDefault(require("./PageFooter"));
 

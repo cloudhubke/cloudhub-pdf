@@ -18,6 +18,8 @@ export { default as SubHeader } from './SubHeader';
 export { default as Text } from './Text';
 export { default as HeaderRow } from './HeaderRow';
 export { default as WaterMark } from './WaterMark';
+export { default as Barcode } from './Barcode';
+export { default as QRCode } from './QRCode';
 export { default as PageFooter } from './PageFooter';
 export { default as PageHeader } from './PageHeader';
 export { default as RenderHtml } from './RenderHtml';

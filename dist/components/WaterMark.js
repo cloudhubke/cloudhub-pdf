@@ -7,7 +7,9 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _ = require(".");
+var _renderer = require("@react-pdf/renderer");
+
+var _Block = _interopRequireDefault(require("./Block"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17,16 +19,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 var WaterMark = function WaterMark(_ref) {
   var style = _ref.style,
-      children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["style", "children"]);
+      children = _ref.children;
 
-  var watermarkStyles = _.StyleSheet.create(_objectSpread({
+  var watermarkStyles = _renderer.StyleSheet.create(_objectSpread({
     position: 'absolute',
     bottom: '50%',
     left: 0,
@@ -34,7 +31,7 @@ var WaterMark = function WaterMark(_ref) {
     transform: 'rotate(20deg)'
   }, style));
 
-  return /*#__PURE__*/_react.default.createElement(_.Block, {
+  return /*#__PURE__*/_react.default.createElement(_Block.default, {
     style: watermarkStyles,
     fixed: true,
     center: true
