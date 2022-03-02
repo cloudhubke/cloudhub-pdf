@@ -28,7 +28,8 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var ReportFooter = function ReportFooter(_ref) {
-  var bottom = _ref.bottom,
+  var _ref$bottom = _ref.bottom,
+      bottom = _ref$bottom === void 0 ? 'Thank you for your business' : _ref$bottom,
       left = _ref.left,
       right = _ref.right,
       _ref$style = _ref.style,
@@ -65,7 +66,7 @@ var ReportFooter = function ReportFooter(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     h6: true,
     thin: true
-  }, bottom || 'Thank you for your business'))) : bottom);
+  }, bottom))) : bottom);
 };
 
 var _default = ReportFooter;

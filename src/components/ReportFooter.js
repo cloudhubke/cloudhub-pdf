@@ -4,7 +4,7 @@ import Text from './Text';
 import { sizes } from '../theme';
 
 const ReportFooter = ({
-  bottom,
+  bottom = 'Thank you for your business',
   left,
   right,
   style = {},
@@ -34,7 +34,7 @@ const ReportFooter = ({
       >
         <Block center>
           <Text h6 thin>
-            {bottom || 'Thank you for your business'}
+            {bottom}
           </Text>
         </Block>
       </Block>
