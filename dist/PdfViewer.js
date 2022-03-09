@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _renderer = require("@react-pdf/renderer");
 
+var _isNode = _interopRequireDefault(require("is-node"));
+
 var _PdfThemeProvider = _interopRequireDefault(require("./theme/PdfThemeProvider"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -17,23 +19,25 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var isNode = require('detect-node');
-
 var geomanistnormalfont;
 var geomanistmediumfont;
 var geomanistbookfont;
 
-if (isNode) {
+if (_isNode.default) {
   var path = require('path');
 
   geomanistnormalfont = path.join(__dirname, './fonts/geomanist/geomanist-regular.ttf');
   geomanistmediumfont = path.join(__dirname, './fonts/geomanist/geomanist-medium.ttf');
   geomanistbookfont = path.join(__dirname, './fonts/geomanist/geomanist-book.ttf');
 } else {
-  geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf');
-  geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf');
-  geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf');
+  geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf').default;
+  geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf').default;
+  geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf').default;
 }
+
+console.log('====================================');
+console.log(geomanistnormalfont);
+console.log('====================================');
 
 _renderer.Font.register({
   family: 'geomanist',
@@ -55,7 +59,7 @@ var PdfViewer = function PdfViewer(_ref) {
 
   var store = {};
 
-  if (isNode) {
+  if (_isNode.default) {
     return /*#__PURE__*/_react.default.createElement(_PdfThemeProvider.default, props, /*#__PURE__*/_react.default.createElement(_renderer.Document, null, children));
   }
 

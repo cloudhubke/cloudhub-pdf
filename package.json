@@ -1,6 +1,6 @@
 {
   "name": "cloudhub-pdf",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Components for generating pdf reports ",
   "main": "dist/index.js",
   "files": [
@@ -11,7 +11,7 @@
     "build": "NODE_ENV=development npx babel src --config-file ./babel.config.json --copy-files --out-dir dist"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^1.6.3",
+    "@react-pdf/renderer": "^2.1.1",
     "detect-node": "^2.0.5",
     "himalaya": "^1.1.0",
     "is-node": "^1.0.2",

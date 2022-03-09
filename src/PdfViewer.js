@@ -1,7 +1,7 @@
 import React from 'react';
 import { PDFViewer, Document, Font } from '@react-pdf/renderer';
+import isNode from 'is-node';
 import PdfThemeProvider from './theme/PdfThemeProvider';
-var isNode = require('detect-node');
 
 let geomanistnormalfont;
 let geomanistmediumfont;
@@ -22,10 +22,16 @@ if (isNode) {
     './fonts/geomanist/geomanist-book.ttf'
   );
 } else {
-  geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf');
-  geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf');
-  geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf');
+  geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf')
+    .default;
+  geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf')
+    .default;
+  geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf').default;
 }
+
+console.log('====================================');
+console.log(geomanistnormalfont);
+console.log('====================================');
 
 Font.register({
   family: 'geomanist',
@@ -38,7 +44,6 @@ Font.register({
       src: geomanistmediumfont,
       fontWeight: 'semibold'
     },
-
     {
       src: geomanistbookfont,
       fontWeight: 'bold'

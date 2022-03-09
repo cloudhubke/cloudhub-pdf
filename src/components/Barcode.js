@@ -17,18 +17,22 @@ function getClientBarcode(text, options = {}) {
 }
 
 function getServerBarcode(text, options = {}) {
-  const { createCanvas } = require('canvas');
-  const canvas = createCanvas();
+  try {
+    const { createCanvas } = require('canvas');
+    const canvas = createCanvas();
 
-  JsBarcode(canvas, text, {
-    width: 4,
-    background: 'transparent',
-    displayValue: false,
-    ...options
-  });
+    JsBarcode(canvas, text, {
+      width: 4,
+      background: 'transparent',
+      displayValue: false,
+      ...options
+    });
 
-  const barcode = canvas.toDataURL();
-  return barcode;
+    const barcode = canvas.toDataURL();
+    return barcode;
+  } catch (error) {
+    console.log(error.toString());
+  }
 }
 
 const Barcode = ({ text, ...props }) => {

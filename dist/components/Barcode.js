@@ -43,17 +43,21 @@ function getClientBarcode(text) {
 function getServerBarcode(text) {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-  var _require = require('canvas'),
-      createCanvas = _require.createCanvas;
+  try {
+    var _require = require('canvas'),
+        createCanvas = _require.createCanvas;
 
-  var canvas = createCanvas();
-  (0, _jsbarcode.default)(canvas, text, _objectSpread({
-    width: 4,
-    background: 'transparent',
-    displayValue: false
-  }, options));
-  var barcode = canvas.toDataURL();
-  return barcode;
+    var canvas = createCanvas();
+    (0, _jsbarcode.default)(canvas, text, _objectSpread({
+      width: 4,
+      background: 'transparent',
+      displayValue: false
+    }, options));
+    var barcode = canvas.toDataURL();
+    return barcode;
+  } catch (error) {
+    console.log(error.toString());
+  }
 }
 
 var Barcode = function Barcode(_ref) {

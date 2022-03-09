@@ -3,131 +3,131 @@ import colors from './Colors';
 
 const Fonts = {
   h1: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.h1,
     lineHeight: '150%',
-    fontWeight: 400,
+    fontWeight: 400
   },
   h2: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.h2,
     lineHeight: '150%',
-    fontWeight: 400,
+    fontWeight: 400
   },
   h3: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.h3,
     lineHeight: '150%',
-    fontWeight: 400,
+    fontWeight: 400
   },
   h4: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.h4,
     lineHeight: '150%',
-    fontWeight: 400,
+    fontWeight: 400
   },
   h5: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.h5,
     lineHeight: '150%',
-    fontWeight: 400,
+    fontWeight: 400
   },
   h6: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.h6,
     lineHeight: '150%',
-    fontWeight: 400,
+    fontWeight: 400
   },
 
   header: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.header,
     lineHeight: '150%',
     letterSpacing: 0.5,
     color: colors.black,
-    fontWeight: 500,
+    fontWeight: 500
   },
   subHeader: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.subHeader,
     lineHeight: '150%',
     letterSpacing: 0.5,
     color: colors.black,
-    fontWeight: 400,
+    fontWeight: 400
   },
 
   title: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.title,
     lineHeight: '150%',
     letterSpacing: 0.5,
     color: colors.black,
-    fontWeight: 500,
+    fontWeight: 500
   },
 
   subTitle: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.subTitle,
     lineHeight: '150%',
     letterSpacing: 0.5,
     fontWeight: 400,
-    color: colors.black,
+    color: colors.black
   },
 
   semibold: {
-    fontFamily: 'Lato',
-    fontWeight: 500,
+    fontFamily: 'geomanist',
+    fontWeight: 500
   },
 
   bold: {
-    fontFamily: 'Lato',
-    fontWeight: 700,
+    fontFamily: 'geomanist',
+    fontWeight: 700
   },
 
   black: {
-    fontFamily: 'Lato',
-    fontWeight: 900,
+    fontFamily: 'geomanist',
+    fontWeight: 900
   },
 
   light: {
-    fontFamily: 'Lato',
-    fontWeight: 300,
+    fontFamily: 'geomanist',
+    fontWeight: 300
   },
 
   normal: {
-    fontFamily: 'Lato',
-    fontWeight: 400,
+    fontFamily: 'geomanist',
+    fontWeight: 400
   },
 
   default: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.body,
-    fontWeight: 400,
+    fontWeight: 400
   },
 
   body: {
-    fontFamily: 'Lato',
+    fontFamily: 'geomanist',
     fontSize: sizes.body,
     lineHeight: '200%',
     color: colors.darkGray,
-    fontWeight: 400,
+    fontWeight: 400
   },
 
   caption: {
     fontSize: sizes.caption,
-    fontWeight: 300,
+    fontWeight: 300
   },
   small: {
     fontSize: sizes.small,
     lineHeight: '200%',
     color: colors.darkGray,
-    fontWeight: 300,
+    fontWeight: 300
   },
   button: {
     fontSize: sizes.button,
     color: colors.white,
-    fontWeight: 400,
-  },
+    fontWeight: 400
+  }
 };
 
 export default Fonts;
