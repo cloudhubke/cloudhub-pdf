@@ -43,17 +43,21 @@ function getClientQRCode(text) {
 function getServerQRCode(text) {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-  var _require = require('canvas'),
-      createCanvas = _require.createCanvas;
+  try {
+    var _require = require('canvas'),
+        createCanvas = _require.createCanvas;
 
-  var canvas = createCanvas();
+    var canvas = createCanvas();
 
-  _qrcode2.default.toCanvas(canvas, text, _objectSpread({
-    margin: 4
-  }, options));
+    _qrcode2.default.toCanvas(canvas, text, _objectSpread({
+      margin: 4
+    }, options));
 
-  var qrcode = canvas.toDataURL();
-  return qrcode;
+    var qrcode = canvas.toDataURL();
+    return qrcode;
+  } catch (error) {
+    console.log(error.toString());
+  }
 }
 
 var QRCode = function QRCode(_ref) {

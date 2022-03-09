@@ -15,16 +15,20 @@ function getClientQRCode(text, options = {}) {
 }
 
 function getServerQRCode(text, options = {}) {
-  const { createCanvas } = require('canvas');
-  const canvas = createCanvas();
+  try {
+    const { createCanvas } = require('canvas');
+    const canvas = createCanvas();
 
-  qrCode.toCanvas(canvas, text, {
-    margin: 4,
-    ...options
-  });
+    qrCode.toCanvas(canvas, text, {
+      margin: 4,
+      ...options
+    });
 
-  const qrcode = canvas.toDataURL();
-  return qrcode;
+    const qrcode = canvas.toDataURL();
+    return qrcode;
+  } catch (error) {
+    console.log(error.toString());
+  }
 }
 
 const QRCode = ({ text, ...props }) => {
