@@ -60,13 +60,13 @@ var ReportFooter = function ReportFooter(_ref) {
     padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5],
     style: _objectSpread({
       marginTop: _theme.sizes.margin
-    }, bottomStyle)
-  }, /*#__PURE__*/_react.default.createElement(_Block.default, {
+    }, bottomStyle),
+    flex: false,
     center: true
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     h6: true,
     thin: true
-  }, bottom))) : bottom);
+  }, bottom)) : bottom);
 };
 
 var _default = ReportFooter;

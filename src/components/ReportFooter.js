@@ -31,12 +31,12 @@ const ReportFooter = ({
       <Block
         padding={[sizes.padding / 2, sizes.padding * 1.5]}
         style={{ marginTop: sizes.margin, ...bottomStyle }}
+        flex={false}
+        center
       >
-        <Block center>
-          <Text h6 thin>
-            {bottom}
-          </Text>
-        </Block>
+        <Text h6 thin>
+          {bottom}
+        </Text>
       </Block>
     ) : (
       bottom

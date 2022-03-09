@@ -120,9 +120,7 @@ const useBlockStyles = ({
   };
 
   const blockStyles = StyleSheet.create({
-    ...(flex === false
-      ? { display: 'flex', position: 'relative', flexDirection: 'column' }
-      : { ...styles.block }), // reset / disable flex
+    ...(flex === false ? {} : { ...styles.block }), // reset / disable flex
     ...(row && styles.row),
     ...(absolute && {
       position: 'absolute',

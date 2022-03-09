@@ -32,9 +32,7 @@ var GridCell = function GridCell(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["title", "width", "style", "children"]);
 
-  var cellStyles = _renderer.StyleSheet.create(_objectSpread(_objectSpread({
-    height: '100%'
-  }, width && {
+  var cellStyles = _renderer.StyleSheet.create(_objectSpread(_objectSpread({}, width && {
     width: width
   }), {}, {
     padding: 2

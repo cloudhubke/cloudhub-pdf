@@ -3,44 +3,44 @@ import colors from './Colors';
 
 const Fonts = {
   h1: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.h1,
     lineHeight: '150%',
     fontWeight: 400
   },
   h2: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.h2,
     lineHeight: '150%',
     fontWeight: 400
   },
   h3: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.h3,
     lineHeight: '150%',
     fontWeight: 400
   },
   h4: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.h4,
     lineHeight: '150%',
     fontWeight: 400
   },
   h5: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.h5,
     lineHeight: '150%',
     fontWeight: 400
   },
   h6: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.h6,
     lineHeight: '150%',
     fontWeight: 400
   },
 
   header: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.header,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -48,7 +48,7 @@ const Fonts = {
     fontWeight: 500
   },
   subHeader: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.subHeader,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -57,7 +57,7 @@ const Fonts = {
   },
 
   title: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.title,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -66,7 +66,7 @@ const Fonts = {
   },
 
   subTitle: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.subTitle,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -75,38 +75,38 @@ const Fonts = {
   },
 
   semibold: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontWeight: 500
   },
 
   bold: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontWeight: 700
   },
 
   black: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontWeight: 900
   },
 
   light: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontWeight: 300
   },
 
   normal: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontWeight: 400
   },
 
   default: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.body,
     fontWeight: 400
   },
 
   body: {
-    fontFamily: 'geomanist',
+    fontFamily: 'Lato',
     fontSize: sizes.body,
     lineHeight: '200%',
     color: colors.darkGray,

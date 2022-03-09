@@ -148,11 +148,7 @@ var useBlockStyles = function useBlockStyles(_ref) {
     return null;
   };
 
-  var blockStyles = _renderer.StyleSheet.create(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, flex === false ? {
-    display: 'flex',
-    position: 'relative',
-    flexDirection: 'column'
-  } : _objectSpread({}, styles.block)), row && styles.row), absolute && {
+  var blockStyles = _renderer.StyleSheet.create(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, flex === false ? {} : _objectSpread({}, styles.block)), row && styles.row), absolute && {
     position: 'absolute',
     right: 0,
     left: 0,
