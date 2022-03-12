@@ -29,10 +29,6 @@ if (isNode) {
   geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf').default;
 }
 
-console.log('====================================');
-console.log(geomanistnormalfont);
-console.log('====================================');
-
 Font.register({
   family: 'geomanist',
   fonts: [
