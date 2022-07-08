@@ -64,7 +64,7 @@ var QRCode = function QRCode(_ref) {
   var text = _ref.text,
       props = _objectWithoutProperties(_ref, ["text"]);
 
-  if (_isNode.default && !document) {
+  if (_isNode.default && !process.env.GATSBY_NODE_GLOBALS) {
     var _qrcode = getServerQRCode(text);
 
     return /*#__PURE__*/_react.default.createElement(_cloudhubPdf.Image, _extends({

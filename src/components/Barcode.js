@@ -36,7 +36,7 @@ function getServerBarcode(text, options = {}) {
 }
 
 const Barcode = ({ text, ...props }) => {
-  if (isNode) {
+  if (isNode && !process.env.GATSBY_NODE_GLOBALS) {
     const barcode = getServerBarcode(text);
 
     return <Image src={barcode} {...props} />;

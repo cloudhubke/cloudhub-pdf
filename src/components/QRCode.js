@@ -32,7 +32,7 @@ function getServerQRCode(text, options = {}) {
 }
 
 const QRCode = ({ text, ...props }) => {
-  if (isNode && !document) {
+  if (isNode && !process.env.GATSBY_NODE_GLOBALS) {
     const qrcode = getServerQRCode(text);
 
     return <Image src={qrcode} {...props} />;

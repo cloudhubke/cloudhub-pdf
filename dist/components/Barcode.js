@@ -64,7 +64,7 @@ var Barcode = function Barcode(_ref) {
   var text = _ref.text,
       props = _objectWithoutProperties(_ref, ["text"]);
 
-  if (_isNode.default) {
+  if (_isNode.default && !process.env.GATSBY_NODE_GLOBALS) {
     var _barcode = getServerBarcode(text);
 
     return /*#__PURE__*/_react.default.createElement(_cloudhubPdf.Image, _extends({
