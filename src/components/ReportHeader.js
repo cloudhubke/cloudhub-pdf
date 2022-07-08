@@ -23,9 +23,7 @@ const ReportHeader = ({ logo, left, middle, right }) => (
             />
           </Block>
         )}
-        <Block center middle padding={[0, 5]}>
-          {middle}
-        </Block>
+        <Block padding={[0, 5]}>{middle}</Block>
         <Block right flex={false}>
           {right}
         </Block>

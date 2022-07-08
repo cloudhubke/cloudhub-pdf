@@ -24,11 +24,9 @@ var geomanistmediumfont;
 var geomanistbookfont;
 
 if (_isNode.default) {
-  var path = require('path');
-
-  geomanistnormalfont = path.join(__dirname, './fonts/geomanist/geomanist-regular.ttf');
-  geomanistmediumfont = path.join(__dirname, './fonts/geomanist/geomanist-medium.ttf');
-  geomanistbookfont = path.join(__dirname, './fonts/geomanist/geomanist-book.ttf');
+  geomanistnormalfont = "".concat(__dirname, "/fonts/geomanist/geomanist-regular.ttf");
+  geomanistmediumfont = "".concat(__dirname, "/fonts/geomanist/geomanist-medium.ttf");
+  geomanistbookfont = "".concat(__dirname, "/fonts/geomanist/geomanist-book.ttf");
 } else {
   geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf').default;
   geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf').default;

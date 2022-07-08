@@ -43,8 +43,6 @@ var ReportHeader = function ReportHeader(_ref) {
       objectFit: 'contain'
     }
   })), /*#__PURE__*/_react.default.createElement(_Block.default, {
-    center: true,
-    middle: true,
     padding: [0, 5]
   }, middle), /*#__PURE__*/_react.default.createElement(_Block.default, {
     right: true,

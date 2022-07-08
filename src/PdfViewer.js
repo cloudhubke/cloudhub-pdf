@@ -8,19 +8,11 @@ let geomanistmediumfont;
 let geomanistbookfont;
 
 if (isNode) {
-  const path = require('path');
-  geomanistnormalfont = path.join(
-    __dirname,
-    './fonts/geomanist/geomanist-regular.ttf'
-  );
-  geomanistmediumfont = path.join(
-    __dirname,
-    './fonts/geomanist/geomanist-medium.ttf'
-  );
-  geomanistbookfont = path.join(
-    __dirname,
-    './fonts/geomanist/geomanist-book.ttf'
-  );
+  geomanistnormalfont = `${__dirname}/fonts/geomanist/geomanist-regular.ttf`;
+
+  geomanistmediumfont = `${__dirname}/fonts/geomanist/geomanist-medium.ttf`;
+
+  geomanistbookfont = `${__dirname}/fonts/geomanist/geomanist-book.ttf`;
 } else {
   geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf')
     .default;
