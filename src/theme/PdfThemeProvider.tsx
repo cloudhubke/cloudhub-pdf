@@ -10,6 +10,12 @@ const PdfThemeProvider = ({
   colors = defaultcolors,
   sizes = defaultsizes,
   ...props
+}: {
+  children?: any;
+  fonts?: any;
+  colors?: any;
+  sizes?: any;
+  [key: string]: any;
 }) => {
   return (
     <PdfThemeContext.Provider value={{ fonts, colors, sizes, ...props }}>

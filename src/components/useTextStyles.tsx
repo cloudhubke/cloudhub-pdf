@@ -6,8 +6,7 @@ const styles = {
   // default style
   text: {
     color: colors.black,
-    fontFamily: 'geomanist',
-    fontSize: 11,
+    fontSize: 8,
     lineHeight: 1.2
   },
   // variations
@@ -23,7 +22,7 @@ const styles = {
     fontWeight: 'medium'
   },
   light: { fontWeight: 'thin' },
-  normal: { fontSize: 12, fontWeight: 'normal' },
+  normal: { fontSize: 8, fontWeight: 'normal' },
   thin: {
     fontWeight: 'thin'
   },
@@ -78,20 +77,21 @@ const styles = {
   warning: { color: colors.warning },
   danger: { color: colors.danger },
   // fonts
-  h1: { fontSize: 28 },
-  h2: { fontSize: 24 },
-  h3: { fontSize: 18 },
-  h4: { fontSize: 16 },
-  h5: { fontSize: 13 },
-  h6: { fontSize: 12 },
-  title: { fontSize: 13, fontWeight: 'semibold' },
-  subTitle: { fontSize: 13 },
+  h1: { fontSize: 20 },
+  h2: { fontSize: 18 },
+  h3: { fontSize: 16 },
+  h4: { fontSize: 14 },
+  h5: { fontSize: 12 },
+  h6: { fontSize: 11 },
+  title: { fontSize: 11, fontWeight: 'semibold' },
+  subTitle: { fontSize: 10 },
 
-  header: { fontSize: 12, fontWeight: 'bold' },
-  subHeader: { fontSize: 12 },
-  body: { fontSize: 9 },
-  caption: { fontSize: 8 },
-  small: { fontSize: 9 }
+  header: { fontSize: 10, fontWeight: 'bold' },
+  subHeader: { fontSize: 9 },
+  body: { fontSize: 8 },
+  caption: { fontSize: 7 },
+  small: { fontSize: 7 },
+  tiny: { fontSize: 6 }
 };
 
 const useTextStyles = ({
@@ -110,6 +110,7 @@ const useTextStyles = ({
   body,
   caption,
   small,
+  tiny,
   size,
   transform,
   button,
@@ -197,8 +198,8 @@ const useTextStyles = ({
     ...(body && styles.body),
     ...(caption && styles.caption),
     ...(small && styles.small),
+    ...(tiny && styles.tiny),
     ...(size && { fontSize: size }),
-    ...(button && styles.button),
     ...(transform && { textTransform: transform }),
     ...(height && { lineHeight: height }),
     ...(noWrap && {

@@ -4,7 +4,7 @@ import Block from './Block';
 
 const GridCell = ({ title, width, style, children, ...props }) => {
   const cellStyles = StyleSheet.create({
-    ...(width && { width }),
+    ...(width && { minWidth: width }),
     padding: 2,
     ...style
   });

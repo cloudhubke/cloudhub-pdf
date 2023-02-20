@@ -13,43 +13,43 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Fonts = {
   h1: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.h1,
     lineHeight: '150%',
     fontWeight: 400
   },
   h2: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.h2,
     lineHeight: '150%',
     fontWeight: 400
   },
   h3: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.h3,
     lineHeight: '150%',
     fontWeight: 400
   },
   h4: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.h4,
     lineHeight: '150%',
     fontWeight: 400
   },
   h5: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.h5,
     lineHeight: '150%',
     fontWeight: 400
   },
   h6: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.h6,
     lineHeight: '150%',
     fontWeight: 400
   },
   header: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.header,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -57,7 +57,7 @@ var Fonts = {
     fontWeight: 500
   },
   subHeader: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.subHeader,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -65,7 +65,7 @@ var Fonts = {
     fontWeight: 400
   },
   title: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.title,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -73,7 +73,7 @@ var Fonts = {
     fontWeight: 500
   },
   subTitle: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.subTitle,
     lineHeight: '150%',
     letterSpacing: 0.5,
@@ -81,32 +81,32 @@ var Fonts = {
     color: _Colors.default.black
   },
   semibold: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontWeight: 500
   },
   bold: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontWeight: 700
   },
   black: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontWeight: 900
   },
   light: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontWeight: 300
   },
   normal: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontWeight: 400
   },
   default: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.body,
     fontWeight: 400
   },
   body: {
-    fontFamily: 'Lato',
+    // fontFamily: 'Lato',
     fontSize: _Sizes.default.body,
     lineHeight: '200%',
     color: _Colors.default.darkGray,

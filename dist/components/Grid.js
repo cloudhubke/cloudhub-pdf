@@ -32,7 +32,8 @@ var Grid = function Grid(_ref) {
       return {
         key: col.name,
         value: row[col.name],
-        width: col.width
+        width: col.width,
+        render: col.render
       };
     });
     var rowkey = getRowId(row);

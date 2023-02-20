@@ -7,23 +7,23 @@ const sizes = {
   margin: 15,
 
   // font sizes
-  h1: 48,
-  h2: 36,
-  h3: 28,
-  h4: 24,
-  h5: 20,
-  h6: 18,
+  h1: 28,
+  h2: 24,
+  h3: 22,
+  h4: 20,
+  h5: 18,
+  h6: 16,
 
-  title: 24,
-  subTitle: 22,
+  title: 14,
+  subTitle: 12,
 
-  header: 28,
-  subHeader: 26,
+  header: 16,
+  subHeader: 15,
 
-  body: 16,
-  caption: 14,
-  small: 12,
-  tiny: 9,
+  body: 12,
+  caption: 11,
+  small: 9,
+  tiny: 8,
   button: 24,
 
   marginHorizontal: 10,
@@ -42,19 +42,19 @@ const sizes = {
     small: 20,
     medium: 30,
     large: 45,
-    xl: 50,
+    xl: 50
   },
   images: {
     small: 20,
     medium: 40,
     large: 60,
-    logo: 200,
+    logo: 200
   },
 
   // InputSharp,
 
   inputHeight: 45,
-  inputMinWidth: 150,
+  inputMinWidth: 150
 };
 
 export default sizes;

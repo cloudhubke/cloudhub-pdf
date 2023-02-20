@@ -23,8 +23,7 @@ var styles = {
   // default style
   text: {
     color: _theme.colors.black,
-    fontFamily: 'geomanist',
-    fontSize: 11,
+    fontSize: 8,
     lineHeight: 1.2
   },
   // variations
@@ -44,7 +43,7 @@ var styles = {
     fontWeight: 'thin'
   },
   normal: {
-    fontSize: 12,
+    fontSize: 8,
     fontWeight: 'normal'
   },
   thin: {
@@ -198,45 +197,48 @@ var styles = {
   },
   // fonts
   h1: {
-    fontSize: 28
+    fontSize: 20
   },
   h2: {
-    fontSize: 24
-  },
-  h3: {
     fontSize: 18
   },
-  h4: {
+  h3: {
     fontSize: 16
   },
-  h5: {
-    fontSize: 13
+  h4: {
+    fontSize: 14
   },
-  h6: {
+  h5: {
     fontSize: 12
   },
+  h6: {
+    fontSize: 11
+  },
   title: {
-    fontSize: 13,
+    fontSize: 11,
     fontWeight: 'semibold'
   },
   subTitle: {
-    fontSize: 13
+    fontSize: 10
   },
   header: {
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: 'bold'
   },
   subHeader: {
-    fontSize: 12
+    fontSize: 9
   },
   body: {
-    fontSize: 9
-  },
-  caption: {
     fontSize: 8
   },
+  caption: {
+    fontSize: 7
+  },
   small: {
-    fontSize: 9
+    fontSize: 7
+  },
+  tiny: {
+    fontSize: 6
   }
 };
 
@@ -256,6 +258,7 @@ var useTextStyles = function useTextStyles(_ref) {
       body = _ref.body,
       caption = _ref.caption,
       small = _ref.small,
+      tiny = _ref.tiny,
       size = _ref.size,
       transform = _ref.transform,
       button = _ref.button,
@@ -322,15 +325,15 @@ var useTextStyles = function useTextStyles(_ref) {
       style = _ref.style,
       classes = _ref.classes,
       cropped = _ref.cropped,
-      otherprops = _objectWithoutProperties(_ref, ["lines", "lineHeight", "h1", "h2", "h3", "h4", "h5", "h6", "title", "subTitle", "header", "subHeader", "body", "caption", "small", "size", "transform", "button", "regular", "bold", "normal", "semibold", "medium", "weight", "light", "center", "right", "spacing", "height", "noWrap", "fullWidth", "color", "accent", "primary", "secondary", "tertiary", "black", "white", "gray", "gray2", "dark", "mistyWhite", "milkyWhite", "error", "clear", "facebook", "transparent", "silver", "steel", "ricePaper", "frost", "cloud", "windowTint", "panther", "charcoal", "coal", "bloodOrange", "snow", "ember", "fire", "drawer", "eggplant", "twitterColor", "facebookColor", "googleColor", "linkedinColor", "pinterestColor", "youtubeColor", "tumblrColor", "behanceColor", "dribbbleColor", "redditColor", "instagramColor", "success", "info", "rose", "warning", "danger", "style", "classes", "cropped"]);
+      otherprops = _objectWithoutProperties(_ref, ["lines", "lineHeight", "h1", "h2", "h3", "h4", "h5", "h6", "title", "subTitle", "header", "subHeader", "body", "caption", "small", "tiny", "size", "transform", "button", "regular", "bold", "normal", "semibold", "medium", "weight", "light", "center", "right", "spacing", "height", "noWrap", "fullWidth", "color", "accent", "primary", "secondary", "tertiary", "black", "white", "gray", "gray2", "dark", "mistyWhite", "milkyWhite", "error", "clear", "facebook", "transparent", "silver", "steel", "ricePaper", "frost", "cloud", "windowTint", "panther", "charcoal", "coal", "bloodOrange", "snow", "ember", "fire", "drawer", "eggplant", "twitterColor", "facebookColor", "googleColor", "linkedinColor", "pinterestColor", "youtubeColor", "tumblrColor", "behanceColor", "dribbbleColor", "redditColor", "instagramColor", "success", "info", "rose", "warning", "danger", "style", "classes", "cropped"]);
 
   var textStyles = _renderer.StyleSheet.create(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, styles.text), lines && {
     maxLines: lines
   }), lineHeight && {
     lineHeight: lineHeight
-  }), h1 && styles.h1), h2 && styles.h2), h3 && styles.h3), h4 && styles.h4), h5 && styles.h5), h6 && styles.h6), title && styles.title), subTitle && styles.subTitle), header && styles.header), subHeader && styles.subHeader), body && styles.body), caption && styles.caption), small && styles.small), size && {
+  }), h1 && styles.h1), h2 && styles.h2), h3 && styles.h3), h4 && styles.h4), h5 && styles.h5), h6 && styles.h6), title && styles.title), subTitle && styles.subTitle), header && styles.header), subHeader && styles.subHeader), body && styles.body), caption && styles.caption), small && styles.small), tiny && styles.tiny), size && {
     fontSize: size
-  }), button && styles.button), transform && {
+  }), transform && {
     textTransform: transform
   }), height && {
     lineHeight: height

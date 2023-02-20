@@ -15,7 +15,8 @@ const Grid = ({
       const datarow = columns.map((col) => ({
         key: col.name,
         value: row[col.name],
-        width: col.width
+        width: col.width,
+        render: col.render
       }));
 
       const rowkey = getRowId(row);

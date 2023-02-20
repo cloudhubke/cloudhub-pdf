@@ -21,6 +21,7 @@ var Text = function Text(props) {
       otherprops = _useTextStyles.otherprops;
 
   return /*#__PURE__*/_react.default.createElement(_renderer.Text, _extends({
+    wrap: true,
     style: textStyles
   }, otherprops));
 };

@@ -48,7 +48,8 @@ var DataRow = function DataRow(_ref) {
     return datarow.map(function (_ref2) {
       var key = _ref2.key,
           value = _ref2.value,
-          width = _ref2.width;
+          width = _ref2.width,
+          render = _ref2.render;
 
       if (cellComponent) {
         return /*#__PURE__*/_react.default.createElement(_GridCell.default, {
@@ -57,14 +58,21 @@ var DataRow = function DataRow(_ref) {
           middle: false
         }, cellComponent({
           row: row,
-          column: key
+          column: key,
+          render: render
         }));
       }
 
       return /*#__PURE__*/_react.default.createElement(_GridCell.default, {
         key: key,
         width: width
-      }, /*#__PURE__*/_react.default.createElement(_Text.default, null, "".concat(value || '')));
+      }, typeof render === 'function' ? render({
+        row: row,
+        Text: _Text.default,
+        Block: _Block.default
+      }) : /*#__PURE__*/_react.default.createElement(_Text.default, {
+        wrap: true
+      }, "".concat(value || '')));
     });
   };
 

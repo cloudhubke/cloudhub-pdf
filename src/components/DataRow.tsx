@@ -15,18 +15,22 @@ const DataRow = ({ row, datarow, cellComponent, style, ...props }) => {
   });
 
   const renderRow = () =>
-    datarow.map(({ key, value, width }) => {
+    datarow.map(({ key, value, width, render }) => {
       if (cellComponent) {
         return (
           <GridCell key={key} width={width} middle={false}>
-            {cellComponent({ row, column: key })}
+            {cellComponent({ row, column: key, render })}
           </GridCell>
         );
       }
 
       return (
         <GridCell key={key} width={width}>
-          <Text>{`${value || ''}`}</Text>
+          {typeof render === 'function' ? (
+            render({ row, Text, Block })
+          ) : (
+            <Text wrap>{`${value || ''}`}</Text>
+          )}
         </GridCell>
       );
     });

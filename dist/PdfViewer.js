@@ -19,34 +19,37 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var geomanistnormalfont;
-var geomanistmediumfont;
-var geomanistbookfont;
-
-if (_isNode.default) {
-  geomanistnormalfont = "".concat(__dirname, "/fonts/geomanist/geomanist-regular.ttf");
-  geomanistmediumfont = "".concat(__dirname, "/fonts/geomanist/geomanist-medium.ttf");
-  geomanistbookfont = "".concat(__dirname, "/fonts/geomanist/geomanist-book.ttf");
-} else {
-  geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf').default;
-  geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf').default;
-  geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf').default;
-}
-
-_renderer.Font.register({
-  family: 'geomanist',
-  fonts: [{
-    src: geomanistnormalfont,
-    fontWeight: 'normal'
-  }, {
-    src: geomanistmediumfont,
-    fontWeight: 'semibold'
-  }, {
-    src: geomanistbookfont,
-    fontWeight: 'bold'
-  }]
-});
-
+// let geomanistnormalfont;
+// let geomanistmediumfont;
+// let geomanistbookfont;
+// if (isNode) {
+//   geomanistnormalfont = `${__dirname}/fonts/geomanist/geomanist-regular.ttf`;
+//   geomanistmediumfont = `${__dirname}/fonts/geomanist/geomanist-medium.ttf`;
+//   geomanistbookfont = `${__dirname}/fonts/geomanist/geomanist-book.ttf`;
+// } else {
+//   geomanistnormalfont = require('./fonts/geomanist/geomanist-regular.ttf')
+//     .default;
+//   geomanistmediumfont = require('./fonts/geomanist/geomanist-medium.ttf')
+//     .default;
+//   geomanistbookfont = require('./fonts/geomanist/geomanist-book.ttf').default;
+// }
+// Font.register({
+//   family: 'geomanist',
+//   fonts: [
+//     {
+//       src: geomanistnormalfont,
+//       fontWeight: 'normal'
+//     },
+//     {
+//       src: geomanistmediumfont,
+//       fontWeight: 'semibold'
+//     },
+//     {
+//       src: geomanistbookfont,
+//       fontWeight: 'bold'
+//     }
+//   ]
+// });
 var PdfViewer = function PdfViewer(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
