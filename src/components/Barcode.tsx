@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'cloudhub-pdf';
+import Image from './Image';
 import isNode from 'is-node';
 import JsBarcode from 'jsbarcode';
 

@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _moment = _interopRequireDefault(require("moment"));
+var _dayjs = _interopRequireDefault(require("dayjs"));
 
 var _Block = _interopRequireDefault(require("./Block"));
 
@@ -31,7 +31,7 @@ var SubHeader = function SubHeader(_ref) {
       bottomContainerProps = _ref.bottomContainerProps,
       props = _objectWithoutProperties(_ref, ["title", "left", "right", "topContainerProps", "bottomContainerProps"]);
 
-  var now = "".concat((0, _moment.default)().format('DD MMM, YYYY'));
+  var now = "".concat((0, _dayjs.default)().format('DD MMM, YYYY'));
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     color: _theme.colors.gray4,
     flex: false

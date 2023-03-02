@@ -2,7 +2,13 @@ import React from 'react';
 import { StyleSheet } from '@react-pdf/renderer';
 import Block from './Block';
 
-const GridCell = ({ title, width, style, children, ...props }) => {
+const GridCell = ({ title, width, style, children, ...props }:{
+  title?: string,
+  width?: number,
+  style?: any,
+  children?: any,
+  [key: string]: any
+}) => {
   const cellStyles = StyleSheet.create({
     ...(width && { minWidth: width }),
     padding: 2,

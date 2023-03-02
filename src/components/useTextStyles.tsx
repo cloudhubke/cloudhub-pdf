@@ -6,7 +6,7 @@ const styles = {
   // default style
   text: {
     color: colors.black,
-    fontSize: 8,
+    fontSize: 10,
     lineHeight: 1.2
   },
   // variations
@@ -86,12 +86,12 @@ const styles = {
   title: { fontSize: 11, fontWeight: 'semibold' },
   subTitle: { fontSize: 10 },
 
-  header: { fontSize: 10, fontWeight: 'bold' },
-  subHeader: { fontSize: 9 },
-  body: { fontSize: 8 },
-  caption: { fontSize: 7 },
-  small: { fontSize: 7 },
-  tiny: { fontSize: 6 }
+  header: { fontSize: 12, fontWeight: 'bold' },
+  subHeader: { fontSize: 11 },
+  body: { fontSize: 10 },
+  caption: { fontSize: 9 },
+  small: { fontSize: 8 },
+  tiny: { fontSize: 7 }
 };
 
 const useTextStyles = ({

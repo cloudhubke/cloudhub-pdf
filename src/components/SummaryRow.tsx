@@ -6,7 +6,29 @@ import { colors, sizes } from '../theme';
 
 import GridCell from './GridCell';
 
-const SummaryRow = ({ columns, data, summary, style, ...props }) => {
+const SummaryRow = ({
+  columns,
+  data,
+  summary,
+  style,
+  ...props
+}: {
+  data: Array<any>;
+  columns: Array<{
+    name: string;
+    title: string;
+    width?: number;
+    render?: (params: {
+      row?: any;
+      Text?: React.ReactNode;
+    }) => React.ReactElement;
+  }>;
+  summary: {
+    [key: string]: (params: { data: Array<any> }) => any;
+  };
+  style?: any;
+  [key: string]: any;
+}) => {
   const rowStyles = StyleSheet.create({
     marginTop: sizes.margin,
     height: 28,

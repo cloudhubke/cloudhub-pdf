@@ -6,7 +6,21 @@ import { colors, sizes } from '../theme';
 
 import GridCell from './GridCell';
 
-const HeaderRow = ({ columns, style }) => {
+const HeaderRow = ({
+  columns,
+  style
+}: {
+  columns: Array<{
+    name: string;
+    title: string;
+    width?: number;
+    render?: (params: {
+      row?: any;
+      Text?: React.ReactNode;
+    }) => React.ReactElement;
+  }>;
+  style?: any;
+}) => {
   const rowStyles = StyleSheet.create({
     marginTop: sizes.margin,
     height: 28,

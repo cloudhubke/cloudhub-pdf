@@ -6,7 +6,36 @@ import { colors } from '../theme';
 
 import GridCell from './GridCell';
 
-const DataRow = ({ row, datarow, cellComponent, style, ...props }) => {
+const DataRow = ({
+  row,
+  datarow,
+  cellComponent,
+  style,
+  ...props
+}: {
+  key?: string;
+  row?: any;
+  datarow?: Array<{
+    key: string;
+    value: any;
+    width?: number;
+    render?: (params: {
+      row?: any;
+      Text?: React.ReactNode;
+      Block?: React.ReactNode;
+    }) => React.ReactElement;
+  }>;
+  cellComponent?: (params: {
+    column: string;
+    row: any;
+    render?: (params: {
+      row?: any;
+      Text?: React.ReactNode;
+      Block?: React.ReactNode;
+    }) => React.ReactElement;
+  }) => React.ReactElement;
+  style?: any;
+}) => {
   const rowStyles = StyleSheet.create({
     // height: 28,
     borderBottomWidth: 0.5,

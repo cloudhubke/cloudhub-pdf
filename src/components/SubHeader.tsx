@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import Block from './Block';
 import Text from './Text';
 import { colors, sizes } from '../theme';
@@ -12,7 +12,7 @@ const SubHeader = ({
   bottomContainerProps,
   ...props
 }) => {
-  const now = `${moment().format('DD MMM, YYYY')}`;
+  const now = `${dayjs().format('DD MMM, YYYY')}`;
 
   return (
     <Block color={colors.gray4} flex={false} {...props}>

@@ -23,7 +23,7 @@ var styles = {
   // default style
   text: {
     color: _theme.colors.black,
-    fontSize: 8,
+    fontSize: 10,
     lineHeight: 1.2
   },
   // variations
@@ -222,23 +222,23 @@ var styles = {
     fontSize: 10
   },
   header: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: 'bold'
   },
   subHeader: {
-    fontSize: 9
+    fontSize: 11
   },
   body: {
-    fontSize: 8
+    fontSize: 10
   },
   caption: {
-    fontSize: 7
+    fontSize: 9
   },
   small: {
-    fontSize: 7
+    fontSize: 8
   },
   tiny: {
-    fontSize: 6
+    fontSize: 7
   }
 };
 

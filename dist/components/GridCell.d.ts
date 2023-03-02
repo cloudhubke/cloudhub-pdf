@@ -1,10 +1,10 @@
 declare const GridCell: {
     ({ title, width, style, children, ...props }: {
-        [x: string]: any;
-        title: any;
-        width: any;
-        style: any;
-        children: any;
+        [key: string]: any;
+        title?: string;
+        width?: number;
+        style?: any;
+        children?: any;
     }): any;
     defaultProps: {
         cellComponent: any;

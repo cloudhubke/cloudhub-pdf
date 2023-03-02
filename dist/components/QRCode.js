@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _cloudhubPdf = require("cloudhub-pdf");
+var _Image = _interopRequireDefault(require("./Image"));
 
 var _isNode = _interopRequireDefault(require("is-node"));
 
@@ -67,13 +67,13 @@ var QRCode = function QRCode(_ref) {
   if (_isNode.default && !process.env.GATSBY_NODE_GLOBALS) {
     var _qrcode = getServerQRCode(text);
 
-    return /*#__PURE__*/_react.default.createElement(_cloudhubPdf.Image, _extends({
+    return /*#__PURE__*/_react.default.createElement(_Image.default, _extends({
       src: _qrcode
     }, props));
   }
 
   var qrcode = getClientQRCode(text);
-  return /*#__PURE__*/_react.default.createElement(_cloudhubPdf.Image, _extends({
+  return /*#__PURE__*/_react.default.createElement(_Image.default, _extends({
     src: qrcode
   }, props));
 };

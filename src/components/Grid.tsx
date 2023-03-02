@@ -2,6 +2,18 @@ import React from 'react';
 import Block from './Block';
 import DataRow from './DataRow';
 
+interface DataColumn {
+  key: string;
+  value: any;
+  width: number;
+  render?: (params: {
+    row?: any;
+    Text?: React.ReactNode;
+  }) => React.ReactElement;
+}
+
+type IDataRow = Array<DataColumn>;
+
 const Grid = ({
   data,
   columns,
@@ -9,6 +21,30 @@ const Grid = ({
   rowComponent,
   cellComponent,
   rowStyle = {}
+}: {
+  data: Array<any>;
+  columns: Array<{
+    name: string;
+    title: string;
+    width?: number;
+    render?: (params: {
+      row?: any;
+      Text?: React.ReactNode;
+    }) => React.ReactElement;
+  }>;
+  getRowId?: (row: any) => string;
+  /**
+   *
+   * @description key is the column name, I is the iteration (of column keys or names) that makes up a row
+   */
+  rowComponent?: (params: {
+    index: number;
+    key: string;
+    row: any;
+    datarow: IDataRow;
+  }) => React.ReactElement;
+  cellComponent?: (params: { column: string; row: any }) => React.ReactElement;
+  rowStyle?: any;
 }) => (
   <Block>
     {data.map((row, index) => {
