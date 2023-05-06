@@ -24,8 +24,12 @@ const ReportFooter = ({
       row
       padding={[sizes.padding / 2, sizes.padding * 1.5, 0, sizes.padding * 2]}
     >
-      <Block style={{ ...leftStyle }}>{left}</Block>
-      <Block style={{ ...rightStyle }}>{right}</Block>
+      <Block flex={false} style={{ ...leftStyle }}>
+        {left}
+      </Block>
+      <Block flex={false} style={{ ...rightStyle }}>
+        {right}
+      </Block>
     </Block>
     {typeof bottom === 'string' ? (
       <Block

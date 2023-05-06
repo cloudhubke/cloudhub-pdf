@@ -13,6 +13,8 @@ var _Text = _interopRequireDefault(require("./Text"));
 
 var _DataRow = _interopRequireDefault(require("./DataRow"));
 
+var _theme = require("../theme");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -55,10 +57,18 @@ var Grid = function Grid(_ref) {
       row: row,
       datarow: datarow,
       cellComponent: cellComponent,
-      style: _objectSpread({}, rowStyle)
+      style: _objectSpread(_objectSpread({}, detailComponent && {
+        borderBottomWidth: 0
+      }), rowStyle)
     }), detailComponent && /*#__PURE__*/_react.default.createElement(_Block.default, {
+      flex: false,
+      row: true,
+      wrap: false,
       style: {
-        marginLeft: 10
+        paddingTop: 5,
+        marginLeft: _theme.sizes.margin * 2,
+        borderBottomWidth: 0.5,
+        borderBottomColor: _theme.colors.gray
       }
     }, detailComponent({
       row: row,

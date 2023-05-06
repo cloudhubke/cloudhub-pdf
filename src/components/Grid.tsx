@@ -2,6 +2,7 @@ import React from 'react';
 import Block from './Block';
 import Text from './Text';
 import DataRow from './DataRow';
+import { colors, sizes } from '../theme';
 
 interface DataColumn {
   key: string;
@@ -80,11 +81,24 @@ const Grid = ({
             row={row}
             datarow={datarow}
             cellComponent={cellComponent}
-            style={{ ...rowStyle }}
+            style={{
+              ...(detailComponent && { borderBottomWidth: 0 }),
+              ...rowStyle
+            }}
           />
 
           {detailComponent && (
-            <Block style={{ marginLeft: 10 }}>
+            <Block
+              flex={false}
+              row
+              wrap={false}
+              style={{
+                paddingTop: 5,
+                marginLeft: sizes.margin * 2,
+                borderBottomWidth: 0.5,
+                borderBottomColor: colors.gray
+              }}
+            >
               {detailComponent({ row, Text, Block })}
             </Block>
           )}
