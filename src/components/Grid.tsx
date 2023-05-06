@@ -1,5 +1,6 @@
 import React from 'react';
 import Block from './Block';
+import Text from './Text';
 import DataRow from './DataRow';
 
 interface DataColumn {
@@ -20,6 +21,7 @@ const Grid = ({
   getRowId,
   rowComponent,
   cellComponent,
+  detailComponent,
   rowStyle = {}
 }: {
   data: Array<any>;
@@ -30,6 +32,7 @@ const Grid = ({
     render?: (params: {
       row?: any;
       Text?: React.ReactNode;
+      Block?: React.ReactNode;
     }) => React.ReactElement;
   }>;
   getRowId?: (row: any) => string;
@@ -44,6 +47,11 @@ const Grid = ({
     datarow: IDataRow;
   }) => React.ReactElement;
   cellComponent?: (params: { column: string; row: any }) => React.ReactElement;
+  detailComponent?: (params: {
+    row: any;
+    Text?: React.ReactNode;
+    Block?: React.ReactNode;
+  }) => React.ReactElement;
   rowStyle?: any;
 }) => (
   <Block>
@@ -66,13 +74,21 @@ const Grid = ({
         });
       }
       return (
-        <DataRow
-          key={`${rowkey}-${index}`}
-          row={row}
-          datarow={datarow}
-          cellComponent={cellComponent}
-          style={{ ...rowStyle }}
-        />
+        <>
+          <DataRow
+            key={`${rowkey}-${index}`}
+            row={row}
+            datarow={datarow}
+            cellComponent={cellComponent}
+            style={{ ...rowStyle }}
+          />
+
+          {detailComponent && (
+            <Block style={{ marginLeft: 10 }}>
+              {detailComponent({ row, Text, Block })}
+            </Block>
+          )}
+        </>
       );
     })}
   </Block>

@@ -1,4 +1,6 @@
 import React from 'react';
+import Block from './Block';
+import Text from './Text';
 interface DataColumn {
     key: string;
     value: any;
@@ -10,7 +12,7 @@ interface DataColumn {
 }
 declare type IDataRow = Array<DataColumn>;
 declare const Grid: {
-    ({ data, columns, getRowId, rowComponent, cellComponent, rowStyle }: {
+    ({ data, columns, getRowId, rowComponent, cellComponent, detailComponent, rowStyle }: {
         data: Array<any>;
         columns: {
             name: string;
@@ -19,6 +21,7 @@ declare const Grid: {
             render?: (params: {
                 row?: any;
                 Text?: React.ReactNode;
+                Block?: React.ReactNode;
             }) => React.ReactElement;
         }[];
         getRowId?: (row: any) => string;
@@ -35,6 +38,11 @@ declare const Grid: {
         cellComponent?: (params: {
             column: string;
             row: any;
+        }) => React.ReactElement;
+        detailComponent?: (params: {
+            row: any;
+            Text?: React.ReactNode;
+            Block?: React.ReactNode;
         }) => React.ReactElement;
         rowStyle?: any;
     }): any;

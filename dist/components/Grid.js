@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Block = _interopRequireDefault(require("./Block"));
 
+var _Text = _interopRequireDefault(require("./Text"));
+
 var _DataRow = _interopRequireDefault(require("./DataRow"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -25,6 +27,7 @@ var Grid = function Grid(_ref) {
       getRowId = _ref.getRowId,
       rowComponent = _ref.rowComponent,
       cellComponent = _ref.cellComponent,
+      detailComponent = _ref.detailComponent,
       _ref$rowStyle = _ref.rowStyle,
       rowStyle = _ref$rowStyle === void 0 ? {} : _ref$rowStyle;
   return /*#__PURE__*/_react.default.createElement(_Block.default, null, data.map(function (row, index) {
@@ -47,13 +50,21 @@ var Grid = function Grid(_ref) {
       });
     }
 
-    return /*#__PURE__*/_react.default.createElement(_DataRow.default, {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_DataRow.default, {
       key: "".concat(rowkey, "-").concat(index),
       row: row,
       datarow: datarow,
       cellComponent: cellComponent,
       style: _objectSpread({}, rowStyle)
-    });
+    }), detailComponent && /*#__PURE__*/_react.default.createElement(_Block.default, {
+      style: {
+        marginLeft: 10
+      }
+    }, detailComponent({
+      row: row,
+      Text: _Text.default,
+      Block: _Block.default
+    })));
   }));
 };
 

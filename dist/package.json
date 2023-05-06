@@ -1,6 +1,6 @@
 {
   "name": "cloudhub-pdf",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "Components for generating pdf reports ",
   "main": "dist/index.js",
   "files": [
@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "npx babel -x \".ts,.tsx,.js,.jsx\" --config-file ./babel.config.json --copy-files --out-dir ./dist --ignore *.test.js src && cp package.json ./dist/package.json && tsc --emitDeclarationOnly"
+    "build": "npx babel -x \".ts,.tsx,.js,.jsx\" --config-file ./babel.config.json --copy-files --out-dir ./dist --ignore *.test.js src && cp package.json ./dist/package.json && tsc --emitDeclarationOnly",
+    "prepublishOnly": "npm version patch"
   },
   "dependencies": {
     "@react-pdf/renderer": "1.6.17",

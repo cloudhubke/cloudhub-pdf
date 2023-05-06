@@ -23,6 +23,7 @@ const ReportGrid = ({
   summary,
   rowComponent,
   cellComponent,
+  detailComponent,
   rowStyle,
   ...props
 }: {
@@ -49,6 +50,11 @@ const ReportGrid = ({
     datarow: DataRow;
   }) => React.ReactElement;
   cellComponent?: (params: { column: string; row: any }) => React.ReactElement;
+  detailComponent?: (params: {
+    row: any;
+    Text?: React.ReactNode;
+    Block?: React.ReactNode;
+  }) => React.ReactElement;
   rowStyle?: any;
 }) => (
   // const rowComponent = ({ index, ...props }) => (
@@ -86,6 +92,7 @@ const ReportGrid = ({
       columns={columns}
       rowComponent={rowComponent}
       cellComponent={cellComponent}
+      detailComponent={detailComponent}
       rowStyle={rowStyle}
     />
     <SummaryRow data={data} columns={columns} summary={summary} />

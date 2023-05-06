@@ -1,4 +1,5 @@
 import React from 'react';
+import Block from './Block';
 interface DataColumn {
     key: string;
     value: any;
@@ -10,7 +11,7 @@ interface DataColumn {
 }
 declare type DataRow = Array<DataColumn>;
 declare const ReportGrid: {
-    ({ columns, data, summary, rowComponent, cellComponent, rowStyle, ...props }: {
+    ({ columns, data, summary, rowComponent, cellComponent, detailComponent, rowStyle, ...props }: {
         columns: {
             name: string;
             title: string;
@@ -38,6 +39,11 @@ declare const ReportGrid: {
         cellComponent?: (params: {
             column: string;
             row: any;
+        }) => React.ReactElement;
+        detailComponent?: (params: {
+            row: any;
+            Text?: React.ReactNode;
+            Block?: React.ReactNode;
         }) => React.ReactElement;
         rowStyle?: any;
     }): any;
