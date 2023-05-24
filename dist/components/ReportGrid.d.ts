@@ -7,6 +7,7 @@ interface DataColumn {
     render?: (params: {
         row?: any;
         Text?: React.ReactNode;
+        Block?: React.ReactNode;
     }) => React.ReactElement;
 }
 declare type DataRow = Array<DataColumn>;

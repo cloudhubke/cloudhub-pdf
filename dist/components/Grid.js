@@ -41,7 +41,7 @@ var Grid = function Grid(_ref) {
         render: col.render
       };
     });
-    var rowkey = getRowId(row);
+    var rowkey = getRowId(row, index);
 
     if (rowComponent && typeof rowComponent === 'function') {
       return rowComponent({
@@ -52,8 +52,9 @@ var Grid = function Grid(_ref) {
       });
     }
 
-    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_DataRow.default, {
-      key: "".concat(rowkey, "-").concat(index),
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, {
+      key: "".concat(rowkey, "-").concat(index)
+    }, /*#__PURE__*/_react.default.createElement(_DataRow.default, {
       row: row,
       datarow: datarow,
       cellComponent: cellComponent,
@@ -83,8 +84,8 @@ Grid.defaultProps = {
   cellComponent: null,
   data: [],
   columns: [],
-  getRowId: function getRowId(row) {
-    return row ? row.id : null;
+  getRowId: function getRowId(row, index) {
+    return row ? row.id || index : index;
   }
 };
 var _default = Grid;

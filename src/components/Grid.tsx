@@ -36,7 +36,7 @@ const Grid = ({
       Block?: React.ReactNode;
     }) => React.ReactElement;
   }>;
-  getRowId?: (row: any) => string;
+  getRowId?: (row: any, index: number) => string;
   /**
    *
    * @description key is the column name, I is the iteration (of column keys or names) that makes up a row
@@ -64,7 +64,7 @@ const Grid = ({
         render: col.render
       }));
 
-      const rowkey = getRowId(row);
+      const rowkey = getRowId(row, index);
 
       if (rowComponent && typeof rowComponent === 'function') {
         return rowComponent({
@@ -75,9 +75,8 @@ const Grid = ({
         });
       }
       return (
-        <>
+        <React.Fragment key={`${rowkey}-${index}`}>
           <DataRow
-            key={`${rowkey}-${index}`}
             row={row}
             datarow={datarow}
             cellComponent={cellComponent}
@@ -102,7 +101,7 @@ const Grid = ({
               {detailComponent({ row, Text, Block })}
             </Block>
           )}
-        </>
+        </React.Fragment>
       );
     })}
   </Block>
@@ -113,7 +112,7 @@ Grid.defaultProps = {
   cellComponent: null,
   data: [],
   columns: [],
-  getRowId: (row) => (row ? row.id : null)
+  getRowId: (row, index) => (row ? row.id || index : index)
 };
 
 export default Grid;

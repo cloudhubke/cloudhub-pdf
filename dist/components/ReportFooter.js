@@ -53,8 +53,10 @@ var ReportFooter = function ReportFooter(_ref) {
     row: true,
     padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5, 0, _theme.sizes.padding * 2]
   }, /*#__PURE__*/_react.default.createElement(_Block.default, {
+    flex: false,
     style: _objectSpread({}, leftStyle)
   }, left), /*#__PURE__*/_react.default.createElement(_Block.default, {
+    flex: false,
     style: _objectSpread({}, rightStyle)
   }, right)), typeof bottom === 'string' ? /*#__PURE__*/_react.default.createElement(_Block.default, {
     padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5],

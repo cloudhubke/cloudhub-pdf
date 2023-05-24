@@ -12,6 +12,7 @@ interface DataColumn {
   render?: (params: {
     row?: any;
     Text?: React.ReactNode;
+    Block?: React.ReactNode;
   }) => React.ReactElement;
 }
 

@@ -24,7 +24,7 @@ declare const Grid: {
                 Block?: React.ReactNode;
             }) => React.ReactElement;
         }[];
-        getRowId?: (row: any) => string;
+        getRowId?: (row: any, index: number) => string;
         /**
          *
          * @description key is the column name, I is the iteration (of column keys or names) that makes up a row
@@ -51,7 +51,7 @@ declare const Grid: {
         cellComponent: any;
         data: any[];
         columns: any[];
-        getRowId: (row: any) => any;
+        getRowId: (row: any, index: any) => any;
     };
 };
 export default Grid;
