@@ -32,16 +32,26 @@ var GridCell = function GridCell(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["title", "width", "style", "children"]);
 
-  var cellStyles = _renderer.StyleSheet.create(_objectSpread(_objectSpread({}, width && {
-    minWidth: width
-  }), {}, {
-    padding: 2
-  }, style));
+  var cellStyles = _renderer.StyleSheet.create({
+    cell: _objectSpread(_objectSpread({
+      position: 'relative'
+    }, width && {
+      width: width
+    }), {}, {
+      padding: 2,
+      mrginRight: 2
+    }, style)
+  });
 
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
-    flex: !width,
-    style: cellStyles
-  }, props), children);
+    flex: Boolean(width) === false,
+    style: cellStyles.cell
+  }, props), /*#__PURE__*/_react.default.createElement(_Block.default, {
+    flex: false,
+    style: _objectSpread({}, width && {
+      width: width - 2
+    })
+  }, children));
 };
 
 GridCell.defaultProps = {

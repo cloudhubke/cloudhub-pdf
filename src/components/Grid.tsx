@@ -23,7 +23,8 @@ const Grid = ({
   rowComponent,
   cellComponent,
   detailComponent,
-  rowStyle = {}
+  rowStyle = {},
+  rowProps = {}
 }: {
   data: Array<any>;
   columns: Array<{
@@ -46,6 +47,8 @@ const Grid = ({
     key: string;
     row: any;
     datarow: IDataRow;
+    Text?: React.ReactNode;
+    Block?: React.ReactNode;
   }) => React.ReactElement;
   cellComponent?: (params: { column: string; row: any }) => React.ReactElement;
   detailComponent?: (params: {
@@ -54,6 +57,7 @@ const Grid = ({
     Block?: React.ReactNode;
   }) => React.ReactElement;
   rowStyle?: any;
+  rowProps?: any;
 }) => (
   <Block>
     {data.map((row, index) => {
@@ -71,7 +75,9 @@ const Grid = ({
           key: rowkey,
           index,
           row,
-          datarow
+          datarow,
+          Block,
+          Text
         });
       }
       return (
@@ -84,6 +90,7 @@ const Grid = ({
               ...(detailComponent && { borderBottomWidth: 0 }),
               ...rowStyle
             }}
+            {...rowProps}
           />
 
           {detailComponent && (

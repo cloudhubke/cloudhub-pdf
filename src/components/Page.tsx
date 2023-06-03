@@ -3,7 +3,15 @@ import { Page as PdfPage, StyleSheet } from '@react-pdf/renderer';
 import { colors } from '../theme';
 
 // Create Document Component
-const Page = ({ style, color, ...props }) => {
+const Page = ({
+  style,
+  color,
+  ...props
+}: {
+  style?: any;
+  color?: string;
+  [key: string]: any;
+}) => {
   const pageStyles = StyleSheet.create({
     ...(color && styles[color]), // predefined styles colors for backgroundColor
     ...(color && !styles[color] && { backgroundColor: color }), // custom backgroundColor

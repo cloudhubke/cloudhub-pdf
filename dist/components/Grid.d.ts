@@ -12,7 +12,7 @@ interface DataColumn {
 }
 declare type IDataRow = Array<DataColumn>;
 declare const Grid: {
-    ({ data, columns, getRowId, rowComponent, cellComponent, detailComponent, rowStyle }: {
+    ({ data, columns, getRowId, rowComponent, cellComponent, detailComponent, rowStyle, rowProps }: {
         data: Array<any>;
         columns: {
             name: string;
@@ -34,6 +34,8 @@ declare const Grid: {
             key: string;
             row: any;
             datarow: IDataRow;
+            Text?: React.ReactNode;
+            Block?: React.ReactNode;
         }) => React.ReactElement;
         cellComponent?: (params: {
             column: string;
@@ -45,6 +47,7 @@ declare const Grid: {
             Block?: React.ReactNode;
         }) => React.ReactElement;
         rowStyle?: any;
+        rowProps?: any;
     }): any;
     defaultProps: {
         rowComponent: any;

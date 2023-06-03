@@ -1,7 +1,8 @@
 import React from 'react';
+import Block from './Block';
 import Text from './Text';
 declare const SummaryRow: {
-    ({ columns, data, summary, style, ...props }: {
+    ({ columns, data, summary, summaryRowComponent, style, ...props }: {
         [key: string]: any;
         data: Array<any>;
         columns: {
@@ -15,9 +16,16 @@ declare const SummaryRow: {
         }[];
         summary: {
             [key: string]: (params: {
-                data: Array<any>;
+                data?: Array<any>;
+                Text?: any;
+                Block?: any;
             }) => any;
         };
+        summaryRowComponent?: (params: {
+            data?: Array<any>;
+            Text?: React.ReactNode;
+            Block?: React.ReactNode;
+        }) => any;
         style?: any;
     }): any;
     defaultProps: {

@@ -50,6 +50,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 //     }
 //   ]
 // });
+_renderer.Font.registerHyphenationCallback(function (word) {
+  var middle = Math.floor(word.length / 2);
+  var parts = word.length === 1 ? [word] : [word.substr(0, middle), word.substr(middle)]; // Check console to see words parts
+  // console.log(word, parts);
+
+  return parts;
+});
+
 var PdfViewer = function PdfViewer(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);

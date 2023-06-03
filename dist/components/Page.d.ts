@@ -1,8 +1,8 @@
 declare const Page: {
     ({ style, color, ...props }: {
-        [x: string]: any;
-        style: any;
-        color: any;
+        [key: string]: any;
+        style?: any;
+        color?: string;
     }): any;
     defaultProps: {
         size: string;

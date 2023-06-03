@@ -39,6 +39,17 @@ import PdfThemeProvider from './theme/PdfThemeProvider';
 //   ]
 // });
 
+Font.registerHyphenationCallback((word) => {
+  const middle = Math.floor(word.length / 2);
+  const parts =
+    word.length === 1 ? [word] : [word.substr(0, middle), word.substr(middle)];
+
+  // Check console to see words parts
+  // console.log(word, parts);
+
+  return parts;
+});
+
 const PdfViewer = ({
   children,
   ...props

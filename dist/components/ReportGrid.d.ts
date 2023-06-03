@@ -12,7 +12,7 @@ interface DataColumn {
 }
 declare type DataRow = Array<DataColumn>;
 declare const ReportGrid: {
-    ({ columns, data, summary, rowComponent, cellComponent, detailComponent, rowStyle, ...props }: {
+    ({ columns, data, summary, rowComponent, cellComponent, summaryRowComponent, detailComponent, rowStyle, rowProps, ...props }: {
         columns: {
             name: string;
             title: string;
@@ -35,18 +35,26 @@ declare const ReportGrid: {
             index: number;
             key: string;
             row: any;
-            datarow: DataRow;
+            datarow?: DataRow;
+            Text?: React.ReactNode;
+            Block?: React.ReactNode;
         }) => React.ReactElement;
         cellComponent?: (params: {
             column: string;
             row: any;
         }) => React.ReactElement;
+        summaryRowComponent?: (params: {
+            data: Array<any>;
+            Text?: React.ReactNode;
+            Block?: React.ReactNode;
+        }) => any;
         detailComponent?: (params: {
             row: any;
             Text?: React.ReactNode;
             Block?: React.ReactNode;
         }) => React.ReactElement;
         rowStyle?: any;
+        rowProps?: any;
     }): any;
     defaultProps: {
         columns: any[];

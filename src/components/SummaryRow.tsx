@@ -10,6 +10,7 @@ const SummaryRow = ({
   columns,
   data,
   summary,
+  summaryRowComponent,
   style,
   ...props
 }: {
@@ -24,14 +25,23 @@ const SummaryRow = ({
     }) => React.ReactElement;
   }>;
   summary: {
-    [key: string]: (params: { data: Array<any> }) => any;
+    [key: string]: (params: {
+      data?: Array<any>;
+      Text?: any;
+      Block?: any;
+    }) => any;
   };
+  summaryRowComponent?: (params: {
+    data?: Array<any>;
+    Text?: React.ReactNode;
+    Block?: React.ReactNode;
+  }) => any;
   style?: any;
   [key: string]: any;
 }) => {
   const rowStyles = StyleSheet.create({
     marginTop: sizes.margin,
-    height: 28,
+    minHeight: 28,
     backgroundColor: colors.gray4,
     borderTopWidth: 0.5,
     borderTopColor: colors.darkGray,
@@ -40,21 +50,32 @@ const SummaryRow = ({
     ...style
   });
 
+  if (typeof summaryRowComponent === 'function') {
+    return summaryRowComponent({
+      data,
+      Block,
+      Text
+    });
+  }
+
   return (
     <Block flex={false} fixed row middle style={rowStyles} {...props}>
       {columns.map(({ name, width }) => {
         const summaryFunction = summary[name];
 
         if (summaryFunction && typeof summaryFunction === 'function') {
-          const value = summaryFunction({ data });
-          return (
+          const value = summaryFunction({ data, Block, Text });
+          return typeof value === 'string' ? (
             <GridCell key={`${name}`} width={width}>
               <Text bold darkGray>
                 {value}
               </Text>
             </GridCell>
+          ) : (
+            value
           );
         }
+
         return (
           <GridCell key={`${name}`} width={width}>
             <Text bold darkGray>

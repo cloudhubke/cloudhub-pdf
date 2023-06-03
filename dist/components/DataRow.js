@@ -38,11 +38,14 @@ var DataRow = function DataRow(_ref) {
       style = _ref.style,
       props = _objectWithoutProperties(_ref, ["row", "datarow", "cellComponent", "style"]);
 
-  var rowStyles = _renderer.StyleSheet.create(_objectSpread({
-    // height: 28,
-    borderBottomWidth: 0.5,
-    borderBottomColor: _theme.colors.gray
-  }, style));
+  var rowStyles = _renderer.StyleSheet.create({
+    row: _objectSpread({
+      // height: 28,
+      borderBottomWidth: 0.5,
+      borderBottomColor: _theme.colors.gray,
+      paddingBottom: 2.5
+    }, style)
+  });
 
   var renderRow = function renderRow() {
     return datarow.map(function (_ref2) {
@@ -71,7 +74,10 @@ var DataRow = function DataRow(_ref) {
         Text: _Text.default,
         Block: _Block.default
       }) : /*#__PURE__*/_react.default.createElement(_Text.default, {
-        wrap: true
+        wrap: true,
+        style: {
+          textAlign: 'justify'
+        }
       }, "".concat(value || '')));
     });
   };
@@ -79,8 +85,7 @@ var DataRow = function DataRow(_ref) {
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     flex: false,
     row: true,
-    middle: true,
-    style: rowStyles,
+    style: rowStyles.row,
     wrap: false
   }, props), renderRow());
 };

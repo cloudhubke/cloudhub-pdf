@@ -35,18 +35,27 @@ var SummaryRow = function SummaryRow(_ref) {
   var columns = _ref.columns,
       data = _ref.data,
       summary = _ref.summary,
+      summaryRowComponent = _ref.summaryRowComponent,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["columns", "data", "summary", "style"]);
+      props = _objectWithoutProperties(_ref, ["columns", "data", "summary", "summaryRowComponent", "style"]);
 
   var rowStyles = _renderer.StyleSheet.create(_objectSpread({
     marginTop: _theme.sizes.margin,
-    height: 28,
+    minHeight: 28,
     backgroundColor: _theme.colors.gray4,
     borderTopWidth: 0.5,
     borderTopColor: _theme.colors.darkGray,
     borderBottomWidth: 0.5,
     borderBottomColor: _theme.colors.darkGray
   }, style));
+
+  if (typeof summaryRowComponent === 'function') {
+    return summaryRowComponent({
+      data: data,
+      Block: _Block.default,
+      Text: _Text.default
+    });
+  }
 
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     flex: false,
@@ -61,15 +70,17 @@ var SummaryRow = function SummaryRow(_ref) {
 
     if (summaryFunction && typeof summaryFunction === 'function') {
       var value = summaryFunction({
-        data: data
+        data: data,
+        Block: _Block.default,
+        Text: _Text.default
       });
-      return /*#__PURE__*/_react.default.createElement(_GridCell.default, {
+      return typeof value === 'string' ? /*#__PURE__*/_react.default.createElement(_GridCell.default, {
         key: "".concat(name),
         width: width
       }, /*#__PURE__*/_react.default.createElement(_Text.default, {
         bold: true,
         darkGray: true
-      }, value));
+      }, value)) : value;
     }
 
     return /*#__PURE__*/_react.default.createElement(_GridCell.default, {

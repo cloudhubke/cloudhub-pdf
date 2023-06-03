@@ -37,10 +37,13 @@ const DataRow = ({
   style?: any;
 }) => {
   const rowStyles = StyleSheet.create({
-    // height: 28,
-    borderBottomWidth: 0.5,
-    borderBottomColor: colors.gray,
-    ...style
+    row: {
+      // height: 28,
+      borderBottomWidth: 0.5,
+      borderBottomColor: colors.gray,
+      paddingBottom: 2.5,
+      ...style
+    }
   });
 
   const renderRow = () =>
@@ -58,14 +61,19 @@ const DataRow = ({
           {typeof render === 'function' ? (
             render({ row, Text, Block })
           ) : (
-            <Text wrap>{`${value || ''}`}</Text>
+            <Text
+              wrap
+              style={{
+                textAlign: 'justify'
+              }}
+            >{`${value || ''}`}</Text>
           )}
         </GridCell>
       );
     });
 
   return (
-    <Block flex={false} row middle style={rowStyles} wrap={false} {...props}>
+    <Block flex={false} row style={rowStyles.row} wrap={false} {...props}>
       {renderRow()}
     </Block>
   );
