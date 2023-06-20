@@ -13,6 +13,8 @@ var _isNode = _interopRequireDefault(require("is-node"));
 
 var _PdfThemeProvider = _interopRequireDefault(require("./theme/PdfThemeProvider"));
 
+var _hyphenation = _interopRequireDefault(require("./components/hyphenation"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -52,9 +54,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 // });
 _renderer.Font.registerHyphenationCallback(function (word) {
   var middle = Math.floor(word.length / 2);
-  var parts = word.length === 1 ? [word] : [word.substr(0, middle), word.substr(middle)]; // Check console to see words parts
-  // console.log(word, parts);
+  var parts = word.length === 1 ? [word] : [word.substring(0, middle), word.substring(middle)]; // Check console to see words parts
 
+  console.log(word, parts);
   return parts;
 });
 

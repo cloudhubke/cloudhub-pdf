@@ -2,6 +2,7 @@ import React from 'react';
 import { PDFViewer, Document, Font } from '@react-pdf/renderer';
 import isNode from 'is-node';
 import PdfThemeProvider from './theme/PdfThemeProvider';
+// import wordHyphenation from './components/hyphenation';
 
 // let geomanistnormalfont;
 // let geomanistmediumfont;
@@ -42,10 +43,12 @@ import PdfThemeProvider from './theme/PdfThemeProvider';
 Font.registerHyphenationCallback((word) => {
   const middle = Math.floor(word.length / 2);
   const parts =
-    word.length === 1 ? [word] : [word.substr(0, middle), word.substr(middle)];
+    word.length === 1
+      ? [word]
+      : [word.substring(0, middle), word.substring(middle)];
 
   // Check console to see words parts
-  // console.log(word, parts);
+  console.log(word, parts);
 
   return parts;
 });
