@@ -47,9 +47,6 @@ Font.registerHyphenationCallback((word) => {
       ? [word]
       : [word.substring(0, middle), word.substring(middle)];
 
-  // Check console to see words parts
-  console.log(word, parts);
-
   return parts;
 });
 

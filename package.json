@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "npx babel -x \".ts,.tsx,.js,.jsx\" --config-file ./babel.config.json --copy-files --out-dir ./dist --ignore *.test.js src && cp package.json ./dist/package.json && tsc --emitDeclarationOnly",
-    "prepublishOnly": "npm version patch"
+    "prepare": "npm version patch"
   },
   "dependencies": {
     "@react-pdf/renderer": "1.6.17",
