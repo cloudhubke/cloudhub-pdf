@@ -40,7 +40,10 @@ var ReportFooter = function ReportFooter(_ref) {
       rightStyle = _ref$rightStyle === void 0 ? {} : _ref$rightStyle,
       _ref$bottomStyle = _ref.bottomStyle,
       bottomStyle = _ref$bottomStyle === void 0 ? {} : _ref$bottomStyle,
-      props = _objectWithoutProperties(_ref, ["bottom", "left", "right", "style", "leftStyle", "rightStyle", "bottomStyle"]);
+      footnotes = _ref.footnotes,
+      _ref$footnotesStyle = _ref.footnotesStyle,
+      footnotesStyle = _ref$footnotesStyle === void 0 ? {} : _ref$footnotesStyle,
+      props = _objectWithoutProperties(_ref, ["bottom", "left", "right", "style", "leftStyle", "rightStyle", "bottomStyle", "footnotes", "footnotesStyle"]);
 
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     name: "SUB-HEADER",
@@ -68,7 +71,17 @@ var ReportFooter = function ReportFooter(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     h6: true,
     thin: true
-  }, bottom)) : bottom);
+  }, bottom)) : bottom, typeof footnotes === 'string' ? /*#__PURE__*/_react.default.createElement(_Block.default, {
+    padding: [_theme.sizes.padding / 2, _theme.sizes.padding * 1.5],
+    style: _objectSpread({
+      marginTop: _theme.sizes.margin
+    }, footnotesStyle),
+    flex: false,
+    center: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    h6: true,
+    thin: true
+  }, footnotes)) : footnotes);
 };
 
 var _default = ReportFooter;

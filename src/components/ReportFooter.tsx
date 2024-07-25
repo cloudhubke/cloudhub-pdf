@@ -11,6 +11,8 @@ const ReportFooter = ({
   leftStyle = {},
   rightStyle = {},
   bottomStyle = {},
+  footnotes,
+  footnotesStyle = {},
   ...props
 }) => (
   <Block
@@ -44,6 +46,20 @@ const ReportFooter = ({
       </Block>
     ) : (
       bottom
+    )}
+    {typeof footnotes === 'string' ? (
+      <Block
+        padding={[sizes.padding / 2, sizes.padding * 1.5]}
+        style={{ marginTop: sizes.margin, ...footnotesStyle }}
+        flex={false}
+        center
+      >
+        <Text h6 thin>
+          {footnotes}
+        </Text>
+      </Block>
+    ) : (
+      footnotes
     )}
   </Block>
 );
