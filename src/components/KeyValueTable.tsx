@@ -1,9 +1,16 @@
 import React from 'react';
 import Text from './Text';
-import Row from './DataRow';
 import RowCell from './GridCell';
 import Block, { BlockProps } from './Block';
 import hexToRgb from '../theme/hextToRgb';
+
+const Row = ({ children, ...props }) => {
+  return (
+    <Block flex={false} row {...props}>
+      {children}
+    </Block>
+  );
+};
 
 const getColor = (color: string, opacity: number) => {
   return `rgba(${hexToRgb(color)}, ${opacity})`;

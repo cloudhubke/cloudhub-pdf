@@ -11,8 +11,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Text = _interopRequireDefault(require("./Text"));
 
-var _DataRow = _interopRequireDefault(require("./DataRow"));
-
 var _GridCell = _interopRequireDefault(require("./GridCell"));
 
 var _Block = _interopRequireWildcard(require("./Block"));
@@ -25,34 +23,44 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var Row = function Row(_ref) {
+  var children = _ref.children,
+      props = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
+    flex: false,
+    row: true
+  }, props), children);
+};
 
 var getColor = function getColor(color, opacity) {
   return "rgba(".concat((0, _hextToRgb.default)(color), ", ").concat(opacity, ")");
 };
 
-var KeyValueTable = function KeyValueTable(_ref) {
-  var data = _ref.data,
-      _ref$showCounter = _ref.showCounter,
-      showCounter = _ref$showCounter === void 0 ? false : _ref$showCounter,
-      _ref$opacity = _ref.opacity,
-      opacity = _ref$opacity === void 0 ? 0.5 : _ref$opacity,
-      small = _ref.small,
-      _ref$keyContainerStyl = _ref.keyContainerStyles,
-      keyContainerStyles = _ref$keyContainerStyl === void 0 ? {} : _ref$keyContainerStyl,
-      _ref$valueContainerSt = _ref.valueContainerStyles,
-      valueContainerStyles = _ref$valueContainerSt === void 0 ? {} : _ref$valueContainerSt,
-      props = _objectWithoutProperties(_ref, ["data", "showCounter", "opacity", "small", "keyContainerStyles", "valueContainerStyles"]);
+var KeyValueTable = function KeyValueTable(_ref2) {
+  var data = _ref2.data,
+      _ref2$showCounter = _ref2.showCounter,
+      showCounter = _ref2$showCounter === void 0 ? false : _ref2$showCounter,
+      _ref2$opacity = _ref2.opacity,
+      opacity = _ref2$opacity === void 0 ? 0.5 : _ref2$opacity,
+      small = _ref2.small,
+      _ref2$keyContainerSty = _ref2.keyContainerStyles,
+      keyContainerStyles = _ref2$keyContainerSty === void 0 ? {} : _ref2$keyContainerSty,
+      _ref2$valueContainerS = _ref2.valueContainerStyles,
+      valueContainerStyles = _ref2$valueContainerS === void 0 ? {} : _ref2$valueContainerS,
+      props = _objectWithoutProperties(_ref2, ["data", "showCounter", "opacity", "small", "keyContainerStyles", "valueContainerStyles"]);
 
   return /*#__PURE__*/_react.default.createElement(_Block.default, _extends({
     style: {
@@ -61,7 +69,7 @@ var KeyValueTable = function KeyValueTable(_ref) {
     },
     flex: false
   }, props), Object.keys(data).map(function (key, index) {
-    return /*#__PURE__*/_react.default.createElement(_DataRow.default, {
+    return /*#__PURE__*/_react.default.createElement(Row, {
       key: key,
       style: {
         paddingVertical: 5,

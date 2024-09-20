@@ -153,6 +153,12 @@ Object.defineProperty(exports, "SummaryRow", {
     return _SummaryRow.default;
   }
 });
+Object.defineProperty(exports, "KeyValueTable", {
+  enumerable: true,
+  get: function get() {
+    return _KeyValueTable.default;
+  }
+});
 Object.defineProperty(exports, "useTextStyles", {
   enumerable: true,
   get: function get() {
@@ -207,6 +213,8 @@ var _DataRow = _interopRequireDefault(require("./DataRow"));
 var _GridCell = _interopRequireDefault(require("./GridCell"));
 
 var _SummaryRow = _interopRequireDefault(require("./SummaryRow"));
+
+var _KeyValueTable = _interopRequireDefault(require("./KeyValueTable"));
 
 var _useTextStyles = _interopRequireDefault(require("./useTextStyles"));
 

@@ -19,5 +19,6 @@ export { default as ReportGrid } from './ReportGrid';
 export { default as DataRow } from './DataRow';
 export { default as GridCell } from './GridCell';
 export { default as SummaryRow } from './SummaryRow';
+export { default as KeyValueTable } from './KeyValueTable';
 export { default as useTextStyles } from './useTextStyles';
 export { default as useBlockStyles } from './useBlockStyles';
